@@ -1,4 +1,4 @@
-$hamburger-color: #f8fbfe;
+$hamburger-color: #7c7c7c;
 $hamburger-thickness: 4px;
 $hamburger-bar-border-radius: 5px;
 
@@ -43,7 +43,7 @@ a {
 
 body {
   --nav-height: 100px;
-  @apply bg-slate-100 dark:bg-neutral-900 transition duration-300;
+  @apply bg-neutral-200 transition duration-300 dark:bg-[#111];
 }
 
 .variable-text {
@@ -54,4 +54,9 @@ body {
 
 .variable-text:hover {
   font-variation-settings: "wght" 700, "ital" 12;
+}
+
+span.bar {
+  @apply bg-neutral-900 dark:bg-neutral-100;
+  //background-color: #fff;
 }

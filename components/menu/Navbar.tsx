@@ -2,6 +2,7 @@ import DarkModeToggle from "@/components/util/DarkModeToggle";
 import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
     if (active) {
       disableBodyScroll(document.body);
     } else {
-      disableBodyScroll(document.body);
+      enableBodyScroll(document.body);
     }
   }, [active]);
 
@@ -33,19 +34,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-5 mx-auto w-[85%] h-16 rounded backdrop-blu shadow-none border-opacity-40 p-3 transition duration-300">
-      <div className="h-full w-full transition duration-300 text-center flex justify-between rounded cursor-pointer">
-        <div className="variable-text text-zinc-900 dark:text-zinc-100 flex flex-col text-left gap-0">
-          <h1 className="text-4xl uppercase">Portfolio</h1>
-          <h2 className="text-sm ">by L.A. Lauw</h2>
-        </div>
-
-        <div className="hidden md:flex gap-5">
-          <div className="mx-2 uppercase text-zinc-900 variable-text bg-zinc-300 dark:zinc-500 rounded-full px-5 py-2  transition duration-300">
-            Resume
+    <>
+      <nav className="fixed top-5 z-40 mx-auto h-20 w-full rounded border-opacity-40 p-3 px-5 shadow-none backdrop-blur transition duration-300 md:px-40">
+        <div className="relative flex h-full w-full cursor-pointer justify-between rounded text-center transition duration-300">
+          <div className="variable-text flex flex-col gap-0 text-left text-zinc-900 dark:text-zinc-100">
+            <h1 className="text-4xl uppercase">Portfolio</h1>
+            <h2 className="text-sm ">by L.A. Lauw</h2>
           </div>
-          <DarkModeToggle />
-          {/* <ul className="flex items-center gap-5">
+
+          <div className="hidden gap-5 md:flex">
+            <div className="variable-text dark:zinc-500 mx-2 rounded-full bg-zinc-300 px-5 py-4 uppercase text-zinc-900 transition duration-300">
+              Resume
+            </div>
+            <DarkModeToggle />
+            {/* <ul className="flex items-center gap-5">
             <li className="variable-text  uppercase bg-gray-500 rounded-full px-5 py-2 hover:bg-gray-700 transition duration-300">
               <a href="#">Resume</a>
             </li>
@@ -53,10 +55,12 @@ const Navbar = () => {
              
             </li>
           </ul> */}
+          </div>
+          <Hamburger handleToggle={handleToggle} props={active} />
         </div>
-        <Hamburger handleToggle={handleToggle} props={active} />
-      </div>
-    </nav>
+      </nav>
+      <MobileMenu handleToggle={handleToggle} props={active} />
+    </>
   );
 };
 
