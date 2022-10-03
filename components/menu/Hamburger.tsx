@@ -2,7 +2,7 @@ const Hamburger = ({ handleToggle, props }: any) => {
   return (
     <div className={"flex items-center justify-center md:hidden"}>
       <button
-        className={`hamburger hamburger--criss-cross ${props ? "active" : ""}`}
+        className={`hamburger ${props ? "active" : ""}`}
         type="button"
         onClick={handleToggle}
       >
