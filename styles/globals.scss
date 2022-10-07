@@ -56,6 +56,6 @@ body {
 }
 
 .hamburger span.bar {
-  @apply bg-neutral-900 dark:bg-neutral-100;
+  @apply bg-neutral-900 transition duration-300 ease-in-out hover:bg-neutral-700 dark:bg-neutral-100 dark:hover:bg-neutral-200;
   //background-color: #fff;
 }

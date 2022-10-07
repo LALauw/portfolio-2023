@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-5 z-40 h-20 w-full max-w-[1600px] rounded border-opacity-40 p-3 px-5 shadow-none backdrop-blur transition duration-300 ">
+      <nav className="fixed top-0 z-40 h-20 w-full max-w-[1600px] rounded border-opacity-40 bg-dark-bg p-3 px-5 shadow-none backdrop-blur transition duration-300 ">
         <div className="relative flex h-full w-full cursor-pointer justify-between rounded text-center transition duration-300">
           <div className="variable-text flex flex-col gap-0 text-left text-zinc-900 dark:text-zinc-100">
             <h1 className="text-4xl uppercase">Portfolio</h1>
