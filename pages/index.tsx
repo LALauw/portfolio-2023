@@ -24,11 +24,11 @@ const Home: NextPage = () => {
           <div className="relative flex w-full flex-col justify-between gap-5 text-center font-abcWhyte md:flex-row md:text-left">
             <div className="flex w-full flex-col gap-3 md:w-1/2">
               <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-5xl font-black uppercase text-transparent ">
-                Hi. I'm Leslie. <br />A Software engineer.
+                Hi. I&apos;m Leslie. <br />A Software engineer.
               </h2>
 
               <p className="text-lg font-medium text-white">
-                I'm currently graduating at The Hague University of Applied
+                I&apos;m currently graduating at The Hague University of Applied
                 Sciences with a passion for web3 technologies.
               </p>
               <div className="mt-5">
