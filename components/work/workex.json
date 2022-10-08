@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Web3 Software Engineer",
+    "link": "https://koios.world/",
+    "company": "KOIOS",
+    "logo": "/koios-logo.svg",
+    "time": "2021 - Present"
+  },
+  {
+    "id": 2,
+    "title": "Software Engineer",
+    "link": "https://www.methylium.com/",
+    "company": "Methylium",
+    "logo": "/methylium.png",
+    "time": "2020 - 2021"
+  },
+  {
+    "id": 3,
+    "title": "Assistant Manager",
+    "link": "https://www.beren.nl/",
+    "company": "De Beren",
+    "logo": "/deberen.png",
+    "time": "2016 - 2022"
+  }
+]

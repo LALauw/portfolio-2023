@@ -4,7 +4,8 @@
     "title": "Dynamic NFTs",
     "link": "Portfolio",
     "subject": "Graduation Assignment",
-    "image": "/dynamic_nfts_image.png",
+    "image": "/koios-logo.svg",
+    "noLogo": false,
     "subtitle": "A portfolio website built with React Typescript and TailwindCSS. Animations made with Framer."
   },
   {
@@ -12,24 +13,26 @@
     "title": "NFT Dashboard",
     "link": "NFTDashboard",
     "subject": "Blockchain",
-    "image": "/dynamic_nfts_image.png",
+    "image": "/thuas2.png",
+    "noLogo": true,
     "subtitle": "NFT dashboard that shows a user's NFT collection and allows them to mint new NFTs. Using their Metamask wallet 🦊"
   },
   {
     "id": 3,
-    "title": "Keukenhof",
-    "link": "Keukenhof",
-    "subject": "Web",
-    "image": "/dynamic_nfts_image.png",
-    "subtitle": "An .NET Core web application for Keukenhof. Including a custom built content management system for administrators."
-  },
-
-  {
-    "id": 4,
     "title": "CitizenM - Methylium",
     "link": "Methylium",
     "subject": "Internship",
-    "image": "/rcksft2.png",
+    "image": "/rcksft.png",
+    "noLogo": false,
     "subtitle": "An internship project where I used Angular and .NET Core to build an automatic rollout feature for their application."
+  },
+  {
+    "id": 4,
+    "title": "Keukenhof",
+    "link": "Keukenhof",
+    "subject": "Web",
+    "image": "/keukenhof.svg",
+    "noLogo": false,
+    "subtitle": "An .NET Core web application for Keukenhof. Including a custom built content management system for administrators."
   }
 ]

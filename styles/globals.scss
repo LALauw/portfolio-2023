@@ -25,6 +25,7 @@ $hamburger-bar-border-radius: 5px;
 }
 
 html {
+  scroll-behavior: smooth;
 }
 
 .nav--hidden {
@@ -42,7 +43,7 @@ a {
 
 body {
   --nav-height: 100px;
-  @apply bg-neutral-200 transition duration-300 dark:bg-[#111];
+  @apply bg-[#111];
 }
 
 .variable-text {

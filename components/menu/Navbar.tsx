@@ -37,21 +37,38 @@ const Navbar = () => {
     <>
       <nav className="fixed top-0 z-40 h-20 w-full max-w-[1600px] rounded border-opacity-40 bg-dark-bg p-3 px-5 shadow-none backdrop-blur transition duration-300 ">
         <div className="relative flex h-full w-full cursor-pointer justify-between rounded text-center transition duration-300">
-          <div className="variable-text flex flex-col gap-0 text-left text-zinc-900 dark:text-zinc-100">
+          <div className="variable-text flex flex-col gap-0 text-left text-zinc-100">
             <h1 className="text-4xl uppercase">Portfolio</h1>
             <h2 className="text-sm ">by L.A. Lauw</h2>
           </div>
 
           <div className="hidden gap-5 md:flex">
-            <DarkModeToggle />
-            {/* <ul className="flex items-center gap-5">
-            <li className="variable-text  uppercase bg-gray-500 rounded-full px-5 py-2 hover:bg-gray-700 transition duration-300">
-              <a href="#">Resume</a>
-            </li>
-            <li className="mx-5">
-             
-            </li>
-          </ul> */}
+            {/* <DarkModeToggle /> */}
+            <ul className="flex items-center gap-5 text-white">
+              <a href="#">
+                <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
+                  Home.
+                </li>
+              </a>
+              <a href="#projects">
+                <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
+                  Projects.
+                </li>
+              </a>
+              <a href="#work">
+                <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
+                  Work.
+                </li>
+              </a>
+              <li className="variable-text mx-2 rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 uppercase text-zinc-900 transition duration-500">
+                <a
+                  href="https://google.com"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                ></a>
+                Resume
+              </li>
+            </ul>
           </div>
           <Hamburger handleToggle={handleToggle} props={active} />
         </div>

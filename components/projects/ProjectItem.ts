@@ -5,4 +5,5 @@ export interface ProjectItem {
   link: string;
   subtitle: string;
   image: string;
+  noLogo: boolean;
 }
