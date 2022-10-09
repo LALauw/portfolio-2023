@@ -1,11 +1,7 @@
 import { motion } from "framer-motion";
 import Project from "./Project";
-import { ProjectItem } from "./ProjectItem";
-import json from "./Projects.json";
 
-const Projects = () => {
-  const items: ProjectItem[] = json;
-
+const Projects = ({ articles }: any) => {
   return (
     <section id="projects" className="my-32 flex flex-col gap-5 px-5">
       <div className="w-full ">
@@ -14,7 +10,7 @@ const Projects = () => {
         </h2>
       </div>
       <div className="grid grid-flow-row grid-cols-1 gap-5 md:grid-cols-2">
-        {items.map((item, i) => (
+        {articles.map((item: any, i: number) => (
           <motion.div
             key={i}
             whileInView={{ opacity: 1, translateY: 0 }}
