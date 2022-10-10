@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import MobileMenu from "./MobileMenu";
+import Link from "next/link";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -45,21 +46,21 @@ const Navbar = () => {
           <div className="hidden gap-5 md:flex">
             {/* <DarkModeToggle /> */}
             <ul className="flex items-center gap-5 text-white">
-              <a href="#">
+              <Link href="/">
                 <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
                   Home.
                 </li>
-              </a>
-              <a href="#projects">
+              </Link>
+              <Link href="/#projects">
                 <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
                   Projects.
                 </li>
-              </a>
-              <a href="#work">
+              </Link>
+              <Link href="/#work">
                 <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
                   Work.
                 </li>
-              </a>
+              </Link>
               <li className="variable-text mx-2 rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 uppercase text-zinc-900 transition duration-500">
                 <a
                   href="https://google.com"

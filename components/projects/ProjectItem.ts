@@ -1,9 +1,14 @@
+import { Content } from "./Content";
+import { CoverImage } from "./CoverImage";
+
 export interface ProjectItem {
-  id: number;
   title: string;
-  subject: string;
-  link: string;
+  smallTitle: string;
   subtitle: string;
-  image: string;
-  noLogo: boolean;
+  summary: string;
+  date: string;
+  coverImage: CoverImage;
+  articleImage: CoverImage;
+  content: Content;
+  slug: string;
 }
