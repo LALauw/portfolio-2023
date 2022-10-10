@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        abcWhyte: ["ABC Whyte", "sans-serif"],
+        abcWhyte: ["ABC Whyte Regular", "sans-serif"],
         abcWhyteVar: ["ABC Whyte Variable", "sans-serif"],
       },
       colors: {

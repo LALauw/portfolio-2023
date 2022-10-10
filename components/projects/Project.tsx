@@ -6,7 +6,7 @@ import Link from "next/link";
 const Project = (props: ProjectItem) => {
   return (
     <Link href={`/article/${props.slug}`}>
-      <div className="group flex min-h-[500px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-accent-dark p-10 shadow transition duration-500 ease-in-out hover:-translate-y-1">
+      <div className="group flex max-h-[350px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-accent-dark p-10 shadow transition duration-500 ease-in-out hover:-translate-y-1 md:min-h-[500px]">
         <h4 className="h-1/5 w-full font-abcWhyteVar font-bold uppercase text-zinc-400">
           {props.subtitle}
         </h4>
@@ -14,7 +14,7 @@ const Project = (props: ProjectItem) => {
           {props.smallTitle}
         </h3>
 
-        <div className="relative flex max-h-[400px] min-h-[300px] w-full items-center justify-center rounded object-cover">
+        <div className="relative flex max-h-[150px] w-full items-center justify-center rounded object-cover md:max-h-[400px] md:min-h-[300px]">
           <Image
             width={400}
             height={300}
@@ -24,7 +24,7 @@ const Project = (props: ProjectItem) => {
           />
         </div>
         {/* <img className="" src={props.image} /> */}
-        <div className="mt-2 flex items-end justify-end font-abcWhyteVar text-3xl font-black text-white">
+        <div className="mt-2 flex items-end justify-end font-abcWhyteVar text-lg font-black text-white md:text-3xl">
           <TiArrowRightThick className="transition duration-500 group-hover:translate-x-3" />
         </div>
 

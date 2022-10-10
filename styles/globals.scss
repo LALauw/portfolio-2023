@@ -16,12 +16,9 @@ $hamburger-bar-border-radius: 5px;
 }
 
 @font-face {
-  font-family: "ABC Whyte";
-  src: url("./fonts/ABCWhyteInktrap-Regular.woff2") format("woff2"),
-    url("./fonts/ABCWhyteInktrap-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+  font-family: "ABC Whyte Regular";
+  src: url("./fonts/ABCWhyte-Regular.woff2") format("woff2"),
+    url("./fonts/ABCWhyte-Regular.woff") format("woff");
 }
 
 html {

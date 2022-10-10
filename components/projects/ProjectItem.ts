@@ -5,6 +5,7 @@ export interface ProjectItem {
   title: string;
   smallTitle: string;
   subtitle: string;
+  summary: string;
   date: string;
   coverImage: CoverImage;
   articleImage: CoverImage;

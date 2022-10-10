@@ -4,7 +4,7 @@ import Project from "./Project";
 const Projects = ({ articles }: any) => {
   return (
     <section id="projects" className="my-32 flex flex-col gap-5 px-5">
-      <div className="w-full ">
+      <div className="w-full">
         <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-5xl font-black uppercase text-transparent ">
           Projects
         </h2>
