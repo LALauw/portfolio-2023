@@ -3,7 +3,7 @@ import Navbar from "./menu/Navbar";
 
 export default function Layout({ children }: any) {
   return (
-    <div className="">
+    <>
       <Head>
         <title>Leslie Lauw Portfolio</title>
         <meta name="description" content="Personal Portfolio" />
@@ -15,6 +15,6 @@ export default function Layout({ children }: any) {
         </section>
         {children}
       </main>
-    </div>
+    </>
   );
 }

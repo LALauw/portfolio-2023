@@ -6,7 +6,7 @@ import Link from "next/link";
 const Project = (props: ProjectItem) => {
   return (
     <Link href={`/article/${props.slug}`}>
-      <div className="group flex max-h-[350px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-accent-dark p-10 shadow transition duration-500 ease-in-out hover:-translate-y-1 md:min-h-[500px]">
+      <div className="group flex max-h-[350px] w-full cursor-pointer flex-col gap-3 rounded-xl bg-accent-dark p-10 shadow transition duration-300 ease-in-out hover:-translate-y-1 md:min-h-[500px]">
         <h4 className="h-1/5 w-full font-abcWhyteVar font-bold uppercase text-zinc-400">
           {props.subtitle}
         </h4>

@@ -1,4 +1,3 @@
-import DarkModeToggle from "@/components/util/DarkModeToggle";
 import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
@@ -51,16 +50,12 @@ const Navbar = () => {
                   Home.
                 </li>
               </Link>
-              <Link href="/#projects">
+              <Link href="/articles">
                 <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
-                  Projects.
+                  Articles.
                 </li>
               </Link>
-              <Link href="/#work">
-                <li className="variable-text mx-5 font-abcWhyteVar text-lg uppercase">
-                  Work.
-                </li>
-              </Link>
+
               <li className="variable-text mx-2 rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 uppercase text-zinc-900 transition duration-500">
                 <a
                   href="https://google.com"
@@ -71,7 +66,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Hamburger handleToggle={handleToggle} props={active} />
+          <Hamburger handleToggle={handleToggle} />
         </div>
       </nav>
       <MobileMenu handleToggle={handleToggle} props={active} />

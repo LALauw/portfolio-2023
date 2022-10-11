@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="mt-5">
             <ul className="flex justify-center gap-5 text-4xl md:justify-start">
               <a
-                href="https://google.com"
+                href="https://github.com/lalauw"
                 rel="noreferrer noopener"
                 target="_blank"
               >
@@ -26,7 +26,7 @@ const Hero = () => {
                 </li>
               </a>
               <a
-                href="https://google.com"
+                href="https://www.linkedin.com/in/leslielauw/"
                 rel="noreferrer noopener"
                 target="_blank"
               >
@@ -35,7 +35,7 @@ const Hero = () => {
                 </li>
               </a>
               <a
-                href="https://google.com"
+                href="https://twitter.com/PauwCrypto"
                 rel="noreferrer noopener"
                 target="_blank"
               >

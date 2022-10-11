@@ -1,17 +1,12 @@
-const Hamburger = ({ handleToggle, props }: any) => {
+const Hamburger = ({ handleToggle }: any) => {
   return (
-    <div className={"flex items-center justify-center md:hidden"}>
-      <button
-        className={`hamburger ${props ? "active" : ""}`}
-        type="button"
-        onClick={handleToggle}
-      >
-        <div className="inner">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-      </button>
+    <div
+      className="group flex flex-col items-center justify-center space-y-2 md:hidden"
+      onClick={handleToggle}
+    >
+      <div className="h-0.5 w-8 bg-white transition duration-300 group-hover:bg-neutral-300"></div>
+      <div className="h-0.5 w-8 bg-white transition duration-300 group-hover:bg-neutral-300"></div>
+      <div className="h-0.5 w-8 bg-white transition duration-300 group-hover:bg-neutral-300"></div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const Works = () => {
   return (
     <section id="work" className="my-32 flex flex-col gap-5 px-5">
       <div className="w-full ">
-        <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-5xl font-black uppercase text-transparent ">
+        <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-3xl font-black uppercase text-transparent md:text-5xl ">
           Experience
         </h2>
       </div>
@@ -20,7 +20,7 @@ const Works = () => {
             whileInView={{ opacity: 1, translateY: 0 }}
             initial={{ opacity: 0, translateY: 100 }}
             //animate={{ opacity: 1, translateY: 0 }}
-            transition={{ duration: 0.75, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
             <Work {...item} />
           </motion.div>

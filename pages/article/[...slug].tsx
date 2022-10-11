@@ -36,7 +36,7 @@ const ArticlePage = (article: ProjectItem) => {
             </Link>
           </div>
           <div className="flex cursor-pointer hover:underline">
-            <Link href={"/#projects"}>
+            <Link href={"/articles"}>
               <li className="flex">
                 Article
                 <span className="mx-2 flex items-center justify-center text-xl">

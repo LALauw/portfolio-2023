@@ -1,12 +1,11 @@
 import { client } from "@/apolloClient";
-import Navbar from "@/components/menu/Navbar";
 import Projects from "@/components/projects/Projects";
 import Works from "@/components/work/Works";
 import type { NextPage } from "next";
-import Head from "next/head";
 import { gql } from "@apollo/client";
 import Hero from "@/components/hero/Hero";
 import Layout from "@/components/Layout";
+import Tech from "@/components/tech/Tech";
 
 const Home: NextPage = ({ articles }: any) => {
   return (
@@ -15,6 +14,7 @@ const Home: NextPage = ({ articles }: any) => {
       <Hero />
       <Projects {...articles} />
       <Works />
+      <Tech />
     </Layout>
   );
 };

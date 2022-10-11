@@ -11,7 +11,7 @@ const Work = (props: WorkItem) => {
               {props.title}
             </h4>
 
-            <h3 className=" font-abcWhyteVar text-2xl font-bold text-white underline decoration-neutral-700 decoration-[3px] underline-offset-8 transition duration-500 group-hover:decoration-teal-300">
+            <h3 className="font-abcWhyteVar text-2xl font-bold text-white underline decoration-neutral-700 decoration-[3px] underline-offset-8 transition duration-500 group-hover:decoration-teal-300">
               {props.company}
             </h3>
           </div>
