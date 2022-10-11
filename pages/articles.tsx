@@ -8,12 +8,10 @@ import Project from "@/components/projects/Project";
 const Articles = (articles: any) => {
   return (
     <Layout>
-      <section id="projects" className="my-32 flex flex-col gap-5 px-5">
-        <Link href="/Articles" className="w-full">
-          <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-3xl font-black uppercase text-transparent md:text-5xl ">
-            Articles
-          </h2>
-        </Link>
+      <section className="my-32 flex flex-col gap-5 px-5">
+        <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-3xl font-black uppercase text-transparent md:text-5xl ">
+          Articles
+        </h2>
         <div className="grid grid-flow-row grid-cols-1 gap-5 md:grid-cols-2">
           {articles.articles.map((item: any, i: number) => (
             <motion.div

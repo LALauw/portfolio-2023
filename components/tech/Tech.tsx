@@ -24,11 +24,11 @@ const Tech = () => {
             transition={{ duration: i * 0.15, ease: "easeInOut" }}
           >
             <a href={item.url} rel="noreferrer noopener" target="_blank">
-              <div className="flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-2xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-4xl">
+              <div className="flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-3xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-5xl">
                 <item.library></item.library>
-                <h1 className=" bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text font-abcWhyte text-xs font-semibold uppercase text-transparent md:text-base">
+                {/* <h1 className=" bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text font-abcWhyte text-xs font-semibold uppercase text-transparent md:text-base">
                   {item.name}
-                </h1>
+                </h1> */}
               </div>
             </a>
           </motion.div>
@@ -48,11 +48,8 @@ const Tech = () => {
             transition={{ duration: i * 0.15, ease: "easeInOut" }}
           >
             <a href={item.url} rel="noreferrer noopener" target="_blank">
-              <div className="flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-2xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-4xl">
+              <div className="flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-3xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-5xl">
                 <item.library></item.library>
-                <h1 className=" bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text font-abcWhyte text-xs font-semibold uppercase text-transparent md:text-base">
-                  {item.name}
-                </h1>
               </div>
             </a>
           </motion.div>
@@ -63,7 +60,7 @@ const Tech = () => {
           Tooling
         </p>
       </div>
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap gap-5 md:gap-5">
         {tooling.map((item: TechItem, i: number) => (
           <motion.div
             key={i}
@@ -72,11 +69,8 @@ const Tech = () => {
             transition={{ duration: i * 0.15, ease: "easeInOut" }}
           >
             <a href={item.url} rel="noreferrer noopener" target="_blank">
-              <div className="flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-2xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-4xl">
+              <div className="group relative flex h-24 w-24 flex-col items-center justify-evenly rounded-lg bg-accent-dark p-5 text-3xl text-white transition duration-300 hover:-translate-y-3 md:h-36 md:w-36 md:text-5xl">
                 <item.library></item.library>
-                <h1 className=" bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text font-abcWhyte text-xs font-semibold uppercase text-transparent md:text-base">
-                  {item.name}
-                </h1>
               </div>
             </a>
           </motion.div>

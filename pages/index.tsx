@@ -6,6 +6,7 @@ import { gql } from "@apollo/client";
 import Hero from "@/components/hero/Hero";
 import Layout from "@/components/Layout";
 import Tech from "@/components/tech/Tech";
+import CTA from "@/components/CTA/CTA";
 
 const Home: NextPage = ({ articles }: any) => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = ({ articles }: any) => {
       <Projects {...articles} />
       <Works />
       <Tech />
+      <CTA />
     </Layout>
   );
 };

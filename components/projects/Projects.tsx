@@ -10,7 +10,7 @@ const Projects = ({ articles }: any) => {
           Projects
         </h2>
       </div>
-      <Link href="/Articles">
+      <Link href="/articles">
         <h2 className="max-w-[100px] cursor-pointer font-abcWhyteVar text-2xl font-bold text-white underline decoration-neutral-700 decoration-[3px] underline-offset-8 transition duration-500 hover:decoration-teal-300">
           Articles
         </h2>
