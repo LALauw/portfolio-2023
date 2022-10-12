@@ -2,18 +2,12 @@ import { gql } from "@apollo/client";
 import { client } from "@/apolloClient";
 import { ProjectItem } from "@/components/projects/ProjectItem";
 import Layout from "@/components/Layout";
-import Markdown from "markdown-to-jsx";
-import ImageComponent from "@/components/util/ImageComponent";
-import ListComponent from "@/components/util/ListComponent";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import CodeComponent from "@/components/util/CodeComponent";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const ArticlePage = (article: ProjectItem) => {
-  //const markdown: string = article.content.markdown;
-  console.log({ article });
   return (
     <Layout>
       <section className="flex flex-col px-4 font-abcWhyte text-base text-white md:text-lg">
@@ -86,11 +80,12 @@ const ArticlePage = (article: ProjectItem) => {
               }}
             />
           </div>
-          {article.demoVideo.url ? (
+
+          {/* {article.demoVideo.url.length > 0 ? (
             <video src={article.demoVideo.url} controls></video>
           ) : (
             <></>
-          )}
+          )} */}
         </article>
 
         <div className="h-[20vh] w-full"></div>
@@ -139,7 +134,6 @@ const QUERYProps = gql`
       demoVideo {
         url
       }
-      markdown
       slug
     }
   }

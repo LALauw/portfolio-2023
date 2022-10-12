@@ -11,6 +11,5 @@ export interface ProjectItem {
   articleImage: CoverImage;
   demoVideo: CoverImage;
   content: Content;
-  markdown: string;
   slug: string;
 }
