@@ -1,3 +1,3 @@
 export interface Content {
-  markdown: string;
+  raw: any;
 }

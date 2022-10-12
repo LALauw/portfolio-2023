@@ -8,9 +8,12 @@ import ListComponent from "@/components/util/ListComponent";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import CodeComponent from "@/components/util/CodeComponent";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const ArticlePage = (article: ProjectItem) => {
-  const markdown: string = article.content.markdown;
+  //const markdown: string = article.content.markdown;
+  console.log({ article });
   return (
     <Layout>
       <section className="flex flex-col px-4 font-abcWhyte text-base text-white md:text-lg">
@@ -70,35 +73,27 @@ const ArticlePage = (article: ProjectItem) => {
             />
           </div>
         </div>
+        <article className="mx-auto max-w-[95%] md:max-w-[50%]">
+          <div className="container prose prose-lg text-white  prose-headings:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:p-0">
+            <RichText
+              content={article.content.raw.children}
+              renderers={{
+                code_block: ({ children }) => (
+                  <pre>
+                    <code className="js">{children}</code>
+                  </pre>
+                ),
+              }}
+            />
+          </div>
+          {article.demoVideo.url ? (
+            <video src={article.demoVideo.url} controls></video>
+          ) : (
+            <></>
+          )}
+        </article>
 
-        <div className="mx-auto font-abcWhyte text-base md:max-w-[50%] md:text-lg">
-          <Markdown
-            options={{
-              overrides: {
-                h2: {
-                  props: {
-                    className: "text-3xl font-black mb-4",
-                  },
-                },
-                img: {
-                  component: ImageComponent,
-                  props: { ...article.coverImage },
-                },
-                p: {
-                  props: {
-                    className: "mb-4 text-base md:text-lg",
-                  },
-                },
-                ul: {
-                  component: ListComponent,
-                  props: { ...article },
-                },
-              },
-            }}
-          >
-            {markdown}
-          </Markdown>
-        </div>
+        <div className="h-[20vh] w-full"></div>
       </section>
     </Layout>
   );
@@ -139,8 +134,12 @@ const QUERYProps = gql`
         url
       }
       content {
-        markdown
+        raw
       }
+      demoVideo {
+        url
+      }
+      markdown
       slug
     }
   }

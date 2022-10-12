@@ -9,6 +9,8 @@ export interface ProjectItem {
   date: string;
   coverImage: CoverImage;
   articleImage: CoverImage;
+  demoVideo: CoverImage;
   content: Content;
+  markdown: string;
   slug: string;
 }

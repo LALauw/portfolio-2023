@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
 @font-face {
   font-family: "ABC Whyte Variable";
   src: url("./fonts/ABCWhyteInktrapVariable.woff2") format("woff2-variations"),
@@ -17,7 +19,6 @@
 
 html {
   scroll-behavior: smooth;
-  word-break: normal;
 }
 
 .nav--hidden {
@@ -52,9 +53,4 @@ body {
 
 .variable-text:hover {
   font-variation-settings: "wght" 700, "ital" 12;
-}
-
-.hamburger span.bar {
-  @apply bg-neutral-100 transition duration-300 ease-in-out hover:bg-neutral-200;
-  //background-color: #fff;
 }
