@@ -10,45 +10,45 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 const ArticlePage = (article: ProjectItem) => {
   return (
     <Layout>
-      <section className="flex flex-col px-4 font-abcWhyte text-base text-white md:text-lg">
-        <div className="mb-2 flex cursor-pointer hover:underline md:hidden">
-          <Link href={"/#home"}>
-            <li className="flex">
-              <span className="ml-2 flex items-center justify-center text-xl">
-                <IoIosArrowBack />
-              </span>
-              Article
-            </li>
-          </Link>
-        </div>
-        <ol className="mb-2 hidden list-none md:flex">
-          <div className="flex cursor-pointer hover:underline">
-            <Link href={"/#home"}>
-              <li className="flex">
-                Home
-                <span className="ml-2 flex items-center justify-center text-xl">
-                  <IoIosArrowForward />
-                </span>
-              </li>
-            </Link>
-          </div>
-          <div className="flex cursor-pointer hover:underline">
-            <Link href={"/articles"}>
-              <li className="flex">
-                Article
-                <span className="mx-2 flex items-center justify-center text-xl">
-                  <IoIosArrowForward />
-                </span>
-              </li>
-            </Link>
-          </div>
-          <div className="flex cursor-pointer hover:underline">
-            <Link href={`/article/${article.slug}`}>
-              <li className="flex">{article.title}</li>
-            </Link>
-          </div>
-        </ol>
+      <section className="flex flex-col px-5 font-abcWhyte text-base text-white md:text-lg">
         <div className="mb-10 flex w-full flex-col gap-5 rounded-lg bg-accent-dark p-2 pb-0 md:min-h-[20vh] md:p-5 md:pb-0">
+          <div className="mb-2 flex cursor-pointer hover:underline md:hidden">
+            <Link href={"/#home"}>
+              <li className="flex items-center justify-center">
+                <span className="mr-2 flex items-center justify-center">
+                  <IoIosArrowBack />
+                </span>
+                Article
+              </li>
+            </Link>
+          </div>
+          <ol className="mb-2 hidden list-none md:flex">
+            <div className="flex cursor-pointer hover:underline">
+              <Link href={"/#home"}>
+                <li className="flex">
+                  Home
+                  <span className="ml-2 flex items-center justify-center text-xl">
+                    <IoIosArrowForward />
+                  </span>
+                </li>
+              </Link>
+            </div>
+            <div className="flex cursor-pointer hover:underline">
+              <Link href={"/articles"}>
+                <li className="flex">
+                  Article
+                  <span className="mx-2 flex items-center justify-center text-xl">
+                    <IoIosArrowForward />
+                  </span>
+                </li>
+              </Link>
+            </div>
+            <div className="flex cursor-pointer hover:underline">
+              <Link href={`/article/${article.slug}`}>
+                <li className="flex">{article.title}</li>
+              </Link>
+            </div>
+          </ol>
           <div className="mx-auto flex max-w-full flex-col md:max-w-[75%]">
             <h2 className="font-abcWhyteVar text-xl text-neutral-200">
               {article.date}
@@ -67,8 +67,8 @@ const ArticlePage = (article: ProjectItem) => {
             />
           </div>
         </div>
-        <article className="mx-auto max-w-[95%] md:max-w-[50%]">
-          <div className="container prose prose-lg text-white  prose-headings:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:p-0">
+        <article className="flex flex-col items-center justify-center">
+          <div className="container prose prose-base w-full text-white prose-headings:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:p-0 prose-img:rounded-lg md:prose-lg">
             <RichText
               content={article.content.raw.children}
               renderers={{
@@ -80,12 +80,15 @@ const ArticlePage = (article: ProjectItem) => {
               }}
             />
           </div>
-
-          {/* {article.demoVideo.url.length > 0 ? (
-            <video src={article.demoVideo.url} controls></video>
+          {article.demoVideo && article.demoVideo.url.length > 0 ? (
+            <video
+              src={article.demoVideo.url + "#t=0.001"}
+              preload="metadata"
+              controls
+            ></video>
           ) : (
             <></>
-          )} */}
+          )}
         </article>
 
         <div className="h-[20vh] w-full"></div>
