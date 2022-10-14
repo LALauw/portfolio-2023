@@ -34,7 +34,7 @@ const MobileMenu = ({ handleToggle, props }: any) => {
               <div className="flex w-full items-center justify-center">
                 <li className="variable-text mx-2 mt-10 min-w-[200px] rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 text-center uppercase text-zinc-900 transition duration-500">
                   <a
-                    href="https://google.com"
+                    href="/Leslie_Lauw_Resume.pdf"
                     rel="noreferrer noopener"
                     target="_blank"
                   ></a>

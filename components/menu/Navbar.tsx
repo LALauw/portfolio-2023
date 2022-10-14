@@ -58,11 +58,12 @@ const Navbar = () => {
 
               <li className="variable-text mx-2 rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 uppercase text-zinc-900 transition duration-500">
                 <a
-                  href="https://google.com"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                ></a>
-                Resume
+                  href="/Leslie_Lauw_Resume.pdf"
+                  target="__blank"
+                  rel="noopener norefferer"
+                >
+                  Resume
+                </a>
               </li>
             </ul>
           </div>
