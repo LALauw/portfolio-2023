@@ -77,6 +77,16 @@ const ArticlePage = (article: ProjectItem) => {
                     <code className="js">{children}</code>
                   </pre>
                 ),
+                a: ({ children, href }) => (
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-teal-400"
+                  >
+                    {children}
+                  </a>
+                ),
               }}
             />
           </div>
