@@ -161,7 +161,7 @@ export async function getStaticProps({ params }: any) {
 
   const article = articles.articles[0];
   return {
-    revalidate: 60,
+    revalidate: 30,
     props: article,
   };
 }
