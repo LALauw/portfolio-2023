@@ -11,8 +11,9 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg font-medium text-white">
-            I&apos;m currently graduating at The Hague University of Applied
-            Sciences with a passion for web3 technologies.
+            I&apos;m a passionate software engineer that loves to build with
+            web3 technologies. Currently contributing to KOIOS DAO, by
+            developing a dynamic NFT application for added gamification.
           </p>
           <div className="mt-5">
             <ul className="flex justify-center gap-5 text-4xl md:justify-start">
