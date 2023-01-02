@@ -11,9 +11,10 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg font-medium text-white">
-            I&apos;m a passionate software engineer that loves to build with
-            web3 technologies. Currently contributing to KOIOS DAO, by
-            developing a dynamic NFT application for added gamification.
+            I&apos;m a passionate software engineer that loves to tackle a
+            challenge. Currently contributing to KOIOS DAO, by completely
+            overhauling their current application architecture using modern
+            technologies like, Next.js, Graphql, and TailwindCSS.
           </p>
           <div className="mt-5">
             <ul className="flex justify-center gap-5 text-4xl md:justify-start">
