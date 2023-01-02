@@ -1,7 +1,7 @@
 import {
   SiAngular,
   SiCsharp,
-  SiCss3,
+  SiGraphql,
   SiDigitalocean,
   SiDotnet,
   SiEthereum,
@@ -68,6 +68,11 @@ export const frameworks = [
     name: "DotNet",
     library: SiDotnet,
     url: "https://dotnet.microsoft.com/en-us/",
+  },
+  {
+    name: "Graphql",
+    library: SiGraphql,
+    url: "https://graphql.org/",
   },
 ];
 
