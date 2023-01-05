@@ -36,15 +36,6 @@ const Hero = () => {
                   <RiLinkedinLine />
                 </li>
               </a>
-              <a
-                href="https://twitter.com/PauwCrypto"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
-                <li className="group rounded-lg bg-accent-dark p-2 text-neutral-400 transition duration-500 ease-in-out hover:scale-95 hover:text-teal-300 ">
-                  <RiTwitterLine />
-                </li>
-              </a>
             </ul>
           </div>
         </div>
