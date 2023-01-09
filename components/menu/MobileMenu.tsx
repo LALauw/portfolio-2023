@@ -36,7 +36,7 @@ const MobileMenu = ({ handleToggle, props }: any) => {
                   <a
                     href="/Leslie_Lauw_Resume.pdf"
                     rel="noreferrer noopener"
-                    target="_blank"
+                    target="__blank"
                   ></a>
                   Resume
                 </li>
