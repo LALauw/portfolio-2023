@@ -31,16 +31,15 @@ const MobileMenu = ({ handleToggle, props }: any) => {
                   Articles
                 </li>
               </Link>
-              <div className="flex w-full items-center justify-center">
+              <a
+                href="/Leslie_Lauw_Resume.pdf"
+                target="__blank"
+                rel="noopener norefferer"
+              >
                 <li className="variable-text mx-2 mt-10 min-w-[200px] rounded-lg bg-gradient-to-tr from-amber-300 to-teal-300 px-2 py-2 text-center uppercase text-zinc-900 transition duration-500">
-                  <a
-                    href="/Leslie_Lauw_Resume.pdf"
-                    rel="noreferrer noopener"
-                    target="__blank"
-                  ></a>
                   Resume
                 </li>
-              </div>
+              </a>
             </ul>
           </div>
         </AnimatePresence>
