@@ -8,7 +8,7 @@ const CTA = () => {
         <p className=" font-abcWhyte text-base text-white md:text-xl">
           Have an exciting project where you need some help? <br /> Don&apos;t
           hesitate and let&apos;s have a{" "}
-          <a href="mailto:cheddar_yeast0l@icloud.com">
+          <a href="mailto:lauw2498@live.nl">
             <span className="cursor-pointer font-abcWhyteVar text-white underline decoration-neutral-300 decoration-[3px] underline-offset-4 transition duration-500 hover:decoration-teal-300">
               chat.
             </span>
