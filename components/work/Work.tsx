@@ -25,7 +25,7 @@ const Work = (props: WorkItem) => {
           <Image
             width={100}
             height={100}
-            className="rounded-lg"
+            className="rounded object-cover"
             layout="intrinsic"
             objectFit="contain"
             src={props.logo}
