@@ -7,7 +7,7 @@ const Projects = ({ articles }: any) => {
     <section id="projects" className="my-32 flex flex-col gap-5 px-5">
       <div className="w-full">
         <h2 className="variable-text bg-gradient-to-tr from-amber-300 to-teal-300 bg-clip-text text-3xl font-black uppercase text-transparent md:text-5xl ">
-          Projects
+          Projects & Posts
         </h2>
       </div>
       <Link href="/articles">

@@ -23,7 +23,10 @@ import {
   SiVercel,
   SiVisualstudiocode,
   SiWeb3Dotjs,
+  SiRust,
 } from "react-icons/si";
+
+import {TbDroplet} from "react-icons/tb";
 
 import { FaHardHat } from "react-icons/fa";
 
@@ -81,6 +84,16 @@ export const languages = [
     name: "Solidity",
     library: SiSolidity,
     url: "https://soliditylang.org/",
+  },
+  {
+    name: "Rust",
+    library: SiRust,
+    url: "https://www.rust-lang.org/",
+  },
+  {
+    name: "Sui Move",
+    library: TbDroplet,
+    url: "https://sui.io/",
   },
   {
     name: "C#",

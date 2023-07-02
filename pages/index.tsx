@@ -23,7 +23,7 @@ const Home: NextPage = ({ articles }: any) => {
 
 const QUERY = gql`
   query {
-    articles {
+    articles(orderBy: date_DESC) {
       title
       smallTitle
       subtitle
@@ -43,6 +43,8 @@ export async function getStaticProps() {
   const { data: articles } = await client.query({
     query: QUERY,
   });
+
+  console.log(articles);
 
   return {
     revalidate: 60,

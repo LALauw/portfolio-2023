@@ -11,10 +11,9 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg font-medium text-white">
-            I&apos;m a passionate software engineer that loves to tackle a
-            challenge. Currently contributing to KOIOS DAO, by completely
-            overhauling their current application architecture using modern
-            technologies like, Next.js, Graphql, and TailwindCSS.
+          I am an enthusiastic software engineer who thrives on overcoming challenges. Presently, 
+          I hold the position of Web3 Developer at Lucky Kat Studios. 
+          In this role, my primary focus lies in the development of blockchain-based applications for gaming, encompassing dapps and smart contracts on the Sui Blockchain. 
           </p>
           <div className="mt-5">
             <ul className="flex justify-center gap-5 text-4xl md:justify-start">
