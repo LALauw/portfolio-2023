@@ -50,25 +50,17 @@ const ArticlePage = (article: ProjectItem) => {
             </div>
           </ol>
           <div className="mx-auto flex max-w-full flex-col md:max-w-[75%]">
-            <h2 className="font-abcWhyteVar text-xl text-neutral-200">
-              {article.date}
-            </h2>
-            <h1 className="mb-4 font-abcWhyteVar text-3xl text-white md:text-7xl">
-              {article.title}
-            </h1>
+            <h2 className="font-abcWhyteVar text-xl text-neutral-200">{article.date}</h2>
+            <h1 className="mb-4 font-abcWhyteVar text-3xl text-white md:text-7xl">{article.title}</h1>
             <p className="">{article.summary}</p>
           </div>
 
           <div className="relative mx-auto flex min-h-[100px] w-[95%] rounded-lg bg-black object-cover md:min-h-[500px] md:max-w-[75%]">
-            <Image
-              layout="fill"
-              objectFit="cover"
-              src={article.articleImage.url}
-            />
+            <Image layout="fill" objectFit="cover" src={article.articleImage.url} />
           </div>
         </div>
         <article className="flex flex-col items-center justify-center">
-          <div className="container prose prose-base w-full text-white prose-headings:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:p-0 prose-img:rounded-lg md:prose-lg">
+          <div className="container prose w-full text-white prose-headings:text-neutral-300 prose-pre:bg-neutral-900 prose-pre:p-0 prose-img:rounded-lg md:prose-lg">
             <RichText
               content={article.content.raw.children}
               renderers={{
@@ -77,13 +69,9 @@ const ArticlePage = (article: ProjectItem) => {
                     <code className="js">{children}</code>
                   </pre>
                 ),
+                p: ({ children }) => <p className="text-justify">{children}</p>,
                 a: ({ children, href }) => (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-teal-400"
-                  >
+                  <a href={href} target="_blank" rel="noopener noreferrer" className="text-teal-400">
                     {children}
                   </a>
                 ),
@@ -91,11 +79,7 @@ const ArticlePage = (article: ProjectItem) => {
             />
           </div>
           {article.demoVideo && article.demoVideo.url.length > 0 ? (
-            <video
-              src={article.demoVideo.url + "#t=0.001"}
-              preload="metadata"
-              controls
-            ></video>
+            <video src={article.demoVideo.url + "#t=0.001"} preload="metadata" controls></video>
           ) : (
             <></>
           )}
