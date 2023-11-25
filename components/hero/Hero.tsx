@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { RiGithubLine, RiTwitterLine, RiLinkedinLine } from "react-icons/ri";
+import Image from 'next/image';
+import { RiGithubLine, RiTwitterLine, RiLinkedinLine } from 'react-icons/ri';
 
 const Hero = () => {
   return (
@@ -11,26 +11,24 @@ const Hero = () => {
           </h2>
 
           <p className="text-lg font-medium text-white">
-          I am an enthusiastic software engineer who thrives on overcoming challenges. Presently, 
-          I hold the position of Web3 Developer at Lucky Kat Studios. 
-          In this role, my primary focus lies in the development of blockchain-based applications for gaming, encompassing dapps and smart contracts on the Sui Blockchain. 
+            I am an enthusiastic software engineer who thrives on overcoming challenges. After developing for some years
+            in the blockchain sector I went back to my roots. Building solutions and integrations for businesses.
+            Presently, I hold the position of Back-end Developer at{' '}
+            <a target="_blank" rel="noreferrer noopener" href="https://www.notive.nl">
+              <span className="cursor-pointer font-abcWhyteVar text-white underline decoration-neutral-300 decoration-[3px] underline-offset-4 transition duration-500 hover:decoration-teal-300">
+                Notive
+              </span>
+            </a>
+            .
           </p>
           <div className="mt-5">
             <ul className="flex justify-center gap-5 text-4xl md:justify-start">
-              <a
-                href="https://github.com/lalauw"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
+              <a href="https://github.com/lalauw" rel="noreferrer noopener" target="_blank">
                 <li className="group rounded-lg bg-accent-dark p-2 text-neutral-400 transition duration-500 ease-in-out hover:scale-95 hover:text-teal-300 ">
                   <RiGithubLine />
                 </li>
               </a>
-              <a
-                href="https://www.linkedin.com/in/leslielauw/"
-                rel="noreferrer noopener"
-                target="_blank"
-              >
+              <a href="https://www.linkedin.com/in/leslielauw/" rel="noreferrer noopener" target="_blank">
                 <li className="group rounded-lg bg-accent-dark p-2 text-neutral-400 transition duration-500 ease-in-out hover:scale-95 hover:text-teal-300 ">
                   <RiLinkedinLine />
                 </li>

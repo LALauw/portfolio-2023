@@ -24,143 +24,135 @@ import {
   SiVisualstudiocode,
   SiWeb3Dotjs,
   SiRust,
-} from "react-icons/si";
+  SiDjango,
+  SiPython,
+  SiLaravel,
+  SiPhp,
+  SiDocker,
+  SiPostgresql,
+  SiPhpstorm,
+  SiJetbrains,
+} from 'react-icons/si';
 
-import {TbDroplet} from "react-icons/tb";
+import { TbDroplet } from 'react-icons/tb';
 
-import { FaHardHat } from "react-icons/fa";
+import { FaHardHat } from 'react-icons/fa';
 
 export const frameworks = [
   {
-    name: "NextJs",
+    name: 'Django',
+    library: SiDjango,
+    url: 'https://www.djangoproject.com/',
+  },
+  {
+    name: 'Laravel',
+    library: SiLaravel,
+    url: 'https://laravel.com/',
+  },
+  {
+    name: 'Docker',
+    library: SiDocker,
+    url: 'https://www.docker.com/',
+  },
+  {
+    name: 'NextJs',
     library: SiNextdotjs,
-    url: "https://nextjs.org/",
+    url: 'https://nextjs.org/',
   },
   {
-    name: "React",
+    name: 'React',
     library: SiReact,
-    url: "https://reactjs.org/",
+    url: 'https://reactjs.org/',
   },
   {
-    name: "Angular",
-    library: SiAngular,
-    url: "https://angular.io/",
-  },
-  {
-    name: "TailwindCSS",
+    name: 'TailwindCSS',
     library: SiTailwindcss,
-    url: "https://tailwindcss.com/",
+    url: 'https://tailwindcss.com/',
   },
   {
-    name: "NodeJS",
+    name: 'NodeJS',
     library: SiNodedotjs,
-    url: "https://nodejs.org/en/",
+    url: 'https://nodejs.org/en/',
   },
   {
-    name: "Hardhat",
-    library: FaHardHat,
-    url: "https://hardhat.org/",
-  },
-  {
-    name: "Jest",
-    library: SiJest,
-    url: "https://jestjs.io/",
-  },
-
-  {
-    name: "DotNet",
+    name: 'DotNet',
     library: SiDotnet,
-    url: "https://dotnet.microsoft.com/en-us/",
+    url: 'https://dotnet.microsoft.com/en-us/',
   },
   {
-    name: "Graphql",
+    name: 'Graphql',
     library: SiGraphql,
-    url: "https://graphql.org/",
+    url: 'https://graphql.org/',
   },
 ];
 
 export const languages = [
   {
-    name: "Solidity",
-    library: SiSolidity,
-    url: "https://soliditylang.org/",
+    name: 'Python',
+    library: SiPython,
+    url: 'https://www.python.org/',
   },
   {
-    name: "Rust",
-    library: SiRust,
-    url: "https://www.rust-lang.org/",
+    name: 'PHP',
+    library: SiPhp,
+    url: 'https://www.php.net/',
   },
   {
-    name: "Sui Move",
+    name: 'SQL',
+    library: SiPostgresql,
+    url: 'https://www.microsoft.com/en-us/sql-server',
+  },
+  {
+    name: 'Sui Move',
     library: TbDroplet,
-    url: "https://sui.io/",
+    url: 'https://sui.io/',
   },
   {
-    name: "C#",
+    name: 'C#',
     library: SiCsharp,
-    url: "https://dotnet.microsoft.com/en-us/languages/csharp",
+    url: 'https://dotnet.microsoft.com/en-us/languages/csharp',
   },
   {
-    name: "Typescript",
+    name: 'Typescript',
     library: SiTypescript,
-    url: "https://www.typescriptlang.org/",
+    url: 'https://www.typescriptlang.org/',
   },
   {
-    name: "Javascript",
+    name: 'Javascript',
     library: SiJavascript,
-    url: "https://www.javascript.com/",
-  },
-  {
-    name: "Java",
-    library: SiJava,
-    url: "https://dev.java/",
-  },
-  {
-    name: "SQL",
-    library: SiMicrosoftsqlserver,
-    url: "https://www.microsoft.com/en-us/sql-server",
-  },
-  {
-    name: "NOSQL",
-    library: SiMongodb,
-    url: "https://www.mongodb.com/",
+    url: 'https://www.javascript.com/',
   },
 ];
 
 export const tooling = [
   {
-    name: "Git",
+    name: 'Jetbrains',
+    library: SiJetbrains,
+    url: 'https://www.jetbrains.com/',
+  },
+  {
+    name: 'Git',
     library: SiGit,
-    url: "https://git-scm.com/",
+    url: 'https://git-scm.com/',
   },
   {
-    name: "Github",
+    name: 'Github',
     library: SiGithub,
-    url: "https://github.com/",
+    url: 'https://github.com/',
   },
   {
-    name: "ethereum",
-    library: SiEthereum,
-    url: "https://ethereum.org/en/",
-  },
-  {
-    name: "Web3",
-    library: SiWeb3Dotjs,
-    url: "https://docs.ethers.io/v5/",
-  },
-  {
-    name: "VsCode",
+    name: 'VsCode',
     library: SiVisualstudiocode,
-    url: "https://code.visualstudio.com/",
+    url: 'https://code.visualstudio.com/',
   },
   {
-    name: "DigitalOcean",
+    name: 'DigitalOcean',
     library: SiDigitalocean,
-    url: "https://www.digitalocean.com/",
+    url: 'https://www.digitalocean.com/',
   },
   {
-    name: "vercel",
+    name: 'vercel',
     library: SiVercel,
-    url: "https://vercel.com/",
+    url: 'https://vercel.com/',
   },
 ];
