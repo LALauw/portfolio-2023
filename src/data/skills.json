@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Build",
+    "items": ["PHP", "Symfony", "Python", "Django", "Laravel", "TypeScript", "Node.js", "C#", ".NET"]
+  },
+  {
+    "title": "Run",
+    "items": ["Docker", "Terraform", "Kubernetes", "DigitalOcean", "GCP"]
+  },
+  {
+    "title": "Maintain",
+    "items": ["ArgoCD", "CI/CD", "Grafana", "Automated Testing", "Technical Documentation"]
+  }
+]

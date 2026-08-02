@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import site from "../data/site.json";
+import cv from "../data/cv.json";
+import experience from "../data/experience.json";
+
+const cvExperience = cv.experienceSlugs.flatMap((slug) => experience.filter((job) => job.slug === slug));
+---
+
+<BaseLayout title={`Curriculum vitae - ${site.name}`} description={`${site.name}'s curriculum vitae`}>
+  <div class="cv-toolbar flex items-center justify-between" data-reveal>
+    <div><p class="section-index">Curriculum vitae</p><p>Generated from <code>src/data/cv.json</code></p></div>
+    <a class="button button-primary" href={`/${cv.filename}`} download>Download PDF ↓</a>
+  </div>
+  <article class="cv-sheet" data-reveal>
+    <header class="cv-header">
+      <div><h1>Leslie A. <strong>Lauw</strong></h1><p>{site.role} · {site.specialism}</p></div>
+      <address>{site.location}<br />{site.phone} · {site.email}<br />github.com/lalauw · linkedin.com/in/leslielauw</address>
+    </header>
+    <section class="cv-section"><h2>Profile</h2><p>{cv.profile}</p></section>
+    <section class="cv-section"><h2>Technical skills</h2><dl class="cv-skills">{Object.entries(cv.skills).map(([category, items]) => <><dt>{category}</dt><dd>{items.join(", ")}</dd></>)}</dl></section>
+    <section class="cv-section"><h2>Work experience</h2><div>{cvExperience.map((job) => job && <article class="cv-job"><div class="cv-job-heading"><div><h3>{job.company}</h3><p>{job.title}</p></div><p>{job.location}<br /><span>{job.period}</span></p></div><ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul></article>)}</div></section>
+    <section class="cv-section"><h2>Education</h2><div>{cv.education.map((item) => <article class="cv-education"><div><h3>{item.school}</h3><p>{item.degree}</p></div><p>{item.location}<br /><span>{item.period}</span></p></article>)}</div></section>
+    <div class="cv-two-column"><section class="cv-section"><h2>Languages</h2><ul>{cv.languages.map((item) => <li>{item}</li>)}</ul></section><section class="cv-section"><h2>Interests</h2><ul>{cv.interests.map((item) => <li>{item}</li>)}</ul></section></div>
+  </article>
+</BaseLayout>

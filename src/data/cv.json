@@ -1,0 +1,26 @@
+{
+  "filename": "Leslie_Lauw_Resume.pdf",
+  "profile": "Software engineer with experience building backend services, business integrations and blockchain products. Focused on reliable systems, clear interfaces and practical delivery.",
+  "experienceSlugs": ["notive", "lucky-kat", "koios", "methylium", "de-beren"],
+  "skills": {
+    "Backend": ["PHP", "Symfony", "Laravel", "Python", "Django", "Node.js", "REST APIs", "PostgreSQL"],
+    "DevOps": ["Docker", "Kubernetes", "Terraform", "DigitalOcean", "ArgoCD", "CI/CD"],
+    "Frontend": ["TypeScript", "JavaScript", "React", "HTML", "CSS"]
+  },
+  "education": [
+    {
+      "school": "THUAS - The Hague University of Applied Sciences",
+      "degree": "B.Sc. in Software Engineering",
+      "period": "Aug. 2018 - Nov. 2022",
+      "location": "The Hague, The Netherlands"
+    },
+    {
+      "school": "Develsteincollege",
+      "degree": "Senior general secondary education (HAVO)",
+      "period": "Aug. 2010 - Jul. 2016",
+      "location": "Zwijndrecht, The Netherlands"
+    }
+  ],
+  "languages": ["Dutch - native", "English - professional proficiency"],
+  "interests": ["Backend architecture", "Infrastructure and automation", "Badminton", "Personal finance"]
+}
