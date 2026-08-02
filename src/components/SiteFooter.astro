@@ -1,0 +1,16 @@
+---
+import site from "../data/site.json";
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer border-t border-line" data-reveal>
+  <div>
+    <p class="footer-title">Let's build something reliable.</p>
+    <p>Open to engineering work and technical collaboration.</p>
+  </div>
+  <div class="footer-links">
+    {site.socials.map((social) => <a href={social.url} target="_blank" rel="noreferrer">{social.label} ↗</a>)}
+    <a href={`mailto:${site.email}`}>Email ↗</a>
+  </div>
+  <p class="footer-meta">© {year} {site.name}</p>
+</footer>

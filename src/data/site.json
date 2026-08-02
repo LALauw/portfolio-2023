@@ -1,0 +1,16 @@
+{
+  "name": "Leslie Lauw",
+  "shortName": "LA",
+  "role": "DevOps / Software Engineer",
+  "specialism": "",
+  "headline": "Software that works. Systems that last.",
+  "intro": "I build systems, infrastructure and reliable integrations. I turn complex operational problems into maintainable software.",
+  "location": "The Netherlands",
+  "availability": "Currently employed @ Notive",
+  "email": "lauw2498@gmail.com",
+  "phone": "(+31) 6-34037846",
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/lalauw" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/leslielauw/" }
+  ]
+}

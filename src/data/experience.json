@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "notive",
+    "company": "Notive",
+    "title": "DevOps Engineer",
+    "period": "2024 - Present",
+    "location": "The Netherlands",
+    "link": "https://www.notive.nl/",
+    "summary": "Since July 2024, taking the lead in DevOps with a focus on Infrastructure as Code, cloud infrastructure, and Kubernetes platform engineering.",
+    "highlights": [
+      "Build and maintain cloud infrastructure on GCP and Kubernetes using Terraform.",
+      "Manage containerized deployments and GitOps delivery workflows with Docker and ArgoCD.",
+      "Improve release reliability through CI/CD automation, observability and clear operational documentation."
+    ],
+    "stack": ["Kubernetes", "Terraform", "GCP", "ArgoCD", "Docker", "CI/CD"],
+    "focus": "Platform & DevOps"
+  },
+  {
+    "slug": "notive",
+    "company": "Notive",
+    "title": "Software Engineer",
+    "period": "2023 - Present",
+    "location": "The Netherlands",
+    "link": "https://www.notive.nl/",
+    "summary": "Backend services and integrations that connect business-critical systems and reduce manual operations.",
+    "highlights": [
+      "Build and maintain backend services and integrations for business-critical workflows.",
+      "Translate operational requirements into reliable APIs, data flows and automation.",
+      "Improve maintainability through testing, documentation and clear system boundaries."
+    ],
+    "stack": ["PHP", "Symfony", "Python", "Django", "PostgreSQL", "Docker"],
+    "focus": "Backend"
+  },
+  {
+    "slug": "lucky-kat",
+    "company": "Lucky Kat Studios",
+    "title": "Web3 Developer",
+    "period": "2023",
+    "location": "The Hague, The Netherlands",
+    "link": "https://www.lucky-kat.com/",
+    "summary": "Blockchain functionality and developer tooling for consumer-facing game products.",
+    "highlights": [
+      "Integrated blockchain components into games and developed TypeScript SDKs.",
+      "Built asset-management modules for the Sui blockchain using Move.",
+      "Developed web tools with Next.js, TypeScript, Tailwind CSS and Node.js."
+    ],
+    "stack": ["TypeScript", "Node.js", "Move", "Sui", "Next.js"],
+    "focus": "Web3"
+  },
+  {
+    "slug": "koios",
+    "company": "KOIOS",
+    "title": "Web3 Software Engineer & Graduate",
+    "period": "2021 - 2023",
+    "location": "Remote",
+    "link": "https://koios.world/",
+    "summary": "Web3 products taken from prototype to production with an emphasis on maintainability and developer experience.",
+    "highlights": [
+      "Designed and built a gamified learning platform using TypeScript and Node.js.",
+      "Developed APIs and smart contracts for Polygon and Ethereum.",
+      "Completed graduation research with a final grade of 9.5/10."
+    ],
+    "stack": ["TypeScript", "Node.js", "Solidity", "Web3"],
+    "focus": "Platform"
+  },
+  {
+    "slug": "methylium",
+    "company": "Methylium",
+    "title": "Software Engineer & Intern",
+    "period": "Aug. 2020 - Feb. 2021",
+    "location": "The Hague, The Netherlands",
+    "link": "https://www.methylium.com/",
+    "summary": "Application development and rollout automation for software running across many devices.",
+    "highlights": [
+      "Developed an automated rollout feature for applications across many devices.",
+      "Built an Angular interface for bulk device selection and rollout monitoring.",
+      "Extended .NET APIs and Microsoft SQL Server data flows."
+    ],
+    "stack": ["C#", ".NET", "Angular", "SQL Server"],
+    "focus": "DevOps"
+  },
+  {
+    "slug": "de-beren",
+    "company": "De Beren",
+    "title": "Assistant Manager",
+    "period": "2016 - 2022",
+    "location": "Zwijndrecht, The Netherlands",
+    "link": "https://www.beren.nl/",
+    "summary": "Team supervision and day-to-day operational responsibility in hospitality.",
+    "highlights": [
+      "Supervised staff and coordinated day-to-day operations.",
+      "Planned personnel, orders and logistics during busy shifts."
+    ],
+    "stack": ["Leadership", "Operations", "Planning"],
+    "focus": "Operations"
+  }
+]

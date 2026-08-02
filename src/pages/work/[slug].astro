@@ -1,0 +1,51 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("work");
+  return articles.map((article) => ({ params: { slug: article.id }, props: { article } }));
+}
+
+interface Props {
+  article: CollectionEntry<"work">;
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const published = new Intl.DateTimeFormat("en-GB", { dateStyle: "long" }).format(new Date(article.data.date));
+---
+
+<BaseLayout title={`${article.data.title} - Leslie Lauw`} description={article.data.summary}>
+  <article class="case-study">
+    <header class="case-header" data-reveal>
+      <a class="back-link" href="/#work">← Back to work</a>
+      <p class="case-kicker">{article.data.subtitle} · {published}</p>
+      <h1>{article.data.title}</h1>
+      <p>{article.data.summary}</p>
+    </header>
+
+    <figure class="article-hero" data-reveal>
+      <img src={article.data.hero} alt="" width="1200" height="675" />
+    </figure>
+
+    <dl class="case-facts grid" data-stagger>
+      <div data-stagger-item><dt>Role</dt><dd>{article.data.role}</dd></div>
+      <div data-stagger-item><dt>Context</dt><dd>{article.data.context}</dd></div>
+      <div data-stagger-item><dt>Type</dt><dd>{article.data.subtitle}</dd></div>
+      <div data-stagger-item><dt>Stack</dt><dd>{article.data.stack.join(" · ")}</dd></div>
+    </dl>
+
+    <div class="article-layout">
+      <aside class="article-aside" data-reveal>
+        <p class="section-index">Article</p>
+        <p>{article.data.smallTitle}</p>
+      </aside>
+      <div class="article-content" data-reveal>
+        <Content />
+      </div>
+    </div>
+
+    <a class="next-work flex items-center justify-between" href="/#work" data-reveal><span>Explore more work</span><strong>Back to selected work ↗</strong></a>
+  </article>
+</BaseLayout>

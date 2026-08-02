@@ -1,0 +1,106 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import site from "../data/site.json";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${site.name} - ${site.role}`,
+  description = site.intro
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL("/og.png", Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b100f" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:width" content="1536" />
+    <meta property="og:image:height" content="1024" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-page text-ink antialiased">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="site-shell">
+      <SiteHeader />
+      <main id="main-content"><slot /></main>
+      <SiteFooter />
+    </div>
+    <script>
+      import { gsap } from "gsap";
+      import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const media = gsap.matchMedia();
+
+      media.add("(prefers-reduced-motion: no-preference)", () => {
+        const intro = gsap.timeline({ defaults: { duration: 0.7, ease: "power2.out" } });
+
+        intro.from("[data-animate='nav']", { autoAlpha: 0, y: -10, duration: 0.5 });
+
+        if (document.querySelector("[data-animate='headline']")) {
+          intro
+            .from("[data-animate='kicker']", { autoAlpha: 0, y: 12 }, "-=0.2")
+            .from("[data-animate='headline']", { autoAlpha: 0, y: 22 }, "-=0.45")
+            .from("[data-animate='intro']", { autoAlpha: 0, y: 16 }, "-=0.45")
+            .from("[data-animate='actions'] > *", { autoAlpha: 0, y: 12, stagger: 0.08 }, "-=0.4")
+            .from("[data-animate='code']", { autoAlpha: 0, y: 18, duration: 0.8 }, "-=0.65");
+        }
+
+        gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((element) => {
+          gsap.from(element, {
+            autoAlpha: 0,
+            y: 24,
+            duration: 0.75,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 88%",
+              once: true
+            }
+          });
+        });
+
+        gsap.utils.toArray<HTMLElement>("[data-stagger]").forEach((group) => {
+          const items = group.querySelectorAll<HTMLElement>("[data-stagger-item]");
+          if (!items.length) return;
+
+          gsap.from(items, {
+            autoAlpha: 0,
+            y: 18,
+            duration: 0.65,
+            ease: "power2.out",
+            stagger: 0.08,
+            scrollTrigger: {
+              trigger: group,
+              start: "top 86%",
+              once: true
+            }
+          });
+        });
+
+        return () => intro.kill();
+      });
+    </script>
+  </body>
+</html>

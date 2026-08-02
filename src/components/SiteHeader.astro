@@ -1,0 +1,16 @@
+---
+import site from "../data/site.json";
+---
+
+<header class="site-header flex min-h-19 items-center justify-between gap-8 border-b border-line" data-animate="nav">
+  <a class="brand" href="/" aria-label={`${site.name} home`}>
+    <span class="brand-mark" aria-hidden="true">{site.shortName}</span>
+    <span>{site.name}</span>
+  </a>
+  <nav class="site-nav flex items-center gap-1" aria-label="Main navigation">
+    <a href="/#work">Work</a>
+    <a href="/#experience">Experience</a>
+    <a href="/cv/">CV</a>
+    <a class="nav-contact" href={`mailto:${site.email}`}>Contact <span aria-hidden="true">↗</span></a>
+  </nav>
+</header>
