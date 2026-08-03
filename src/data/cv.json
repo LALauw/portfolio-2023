@@ -4,7 +4,7 @@
   "experienceSlugs": ["notive", "lucky-kat", "koios", "methylium", "de-beren"],
   "skills": {
     "Backend": ["PHP", "Symfony", "Laravel", "Python", "Django", "Node.js", "REST APIs", "PostgreSQL"],
-    "DevOps": ["Docker", "Kubernetes", "Terraform", "DigitalOcean", "ArgoCD", "CI/CD"],
+    "DevOps": ["Docker", "Kubernetes", "Terraform", "Helm", "DigitalOcean", "ArgoCD", "CI/CD"],
     "Frontend": ["TypeScript", "JavaScript", "React", "HTML", "CSS"]
   },
   "education": [

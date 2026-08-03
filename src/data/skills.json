@@ -5,7 +5,7 @@
   },
   {
     "title": "Run",
-    "items": ["Docker", "Terraform", "Kubernetes", "DigitalOcean", "GCP"]
+    "items": ["Docker", "Terraform", "Kubernetes", "Helm", "DigitalOcean", "GCP"]
   },
   {
     "title": "Maintain",
