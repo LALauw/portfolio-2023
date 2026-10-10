@@ -14,7 +14,7 @@ const cvExperience = cv.experienceSlugs.flatMap((slug) => experience.filter((job
   </div>
   <article class="cv-sheet" data-reveal>
     <header class="cv-header">
-      <div><h1>Leslie A. <strong>Lauw</strong></h1><p>{site.role} · {site.specialism}</p></div>
+      <div><h1>Leslie A. <strong>Lauw</strong></h1><p>{cv.role ?? site.role} · {cv.specialism ?? site.specialism}</p></div>
       <address>{site.location}<br />{site.phone} · {site.email}<br />github.com/lalauw · linkedin.com/in/leslielauw</address>
     </header>
     <section class="cv-section"><h2>Profile</h2><p>{cv.profile}</p></section>

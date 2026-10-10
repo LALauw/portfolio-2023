@@ -1,10 +1,12 @@
 {
   "filename": "Leslie_Lauw_Resume.pdf",
-  "profile": "Software engineer with experience building backend services, business integrations and blockchain products. Focused on reliable systems, clear interfaces and practical delivery.",
-  "experienceSlugs": ["notive", "lucky-kat", "koios", "methylium", "de-beren"],
+  "role": "DevOps Engineer",
+  "specialism": "Kubernetes | Terraform | GitOps",
+  "profile": "DevOps engineer responsible for designing and building cloud infrastructure and Kubernetes clusters from scratch. I manage infrastructure with Terraform, deploy and configure cluster components with Helm, and automate deployments with Argo CD. My software engineering background helps me work closely with developers and take responsibility for the platform from initial setup through daily operations.",
+  "experienceSlugs": ["notive", "lucky-kat", "koios"],
   "skills": {
+    "DevOps": ["Kubernetes", "Terraform", "Helm", "Argo CD", "Docker", "GCP", "DigitalOcean", "CI/CD", "GitOps", "Monitoring & logging"],
     "Backend": ["PHP", "Symfony", "Laravel", "Python", "Django", "Node.js", "REST APIs", "PostgreSQL"],
-    "DevOps": ["Docker", "Kubernetes", "Terraform", "Helm", "DigitalOcean", "ArgoCD", "CI/CD"],
     "Frontend": ["TypeScript", "JavaScript", "React", "HTML", "CSS"]
   },
   "education": [

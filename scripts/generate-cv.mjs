@@ -7,6 +7,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const readJson = (filename) => JSON.parse(fs.readFileSync(path.join(root, "src", "data", filename), "utf8"));
 const site = readJson("site.json");
 const cv = readJson("cv.json");
+const role = cv.role ?? site.role;
+const specialism = cv.specialism ?? site.specialism;
 const allExperience = readJson("experience.json");
 const experience = cv.experienceSlugs.flatMap((slug) => allExperience.filter((job) => job.slug === slug));
 const output = path.join(root, "public", cv.filename);
@@ -20,13 +22,13 @@ const left = 52;
 const right = 52;
 const contentWidth = pageWidth - left - right;
 
-const doc = new PDFDocument({ size: "A4", margins: { top: 44, bottom: 42, left, right }, bufferPages: true, info: { Title: `${site.name} - Curriculum Vitae`, Author: site.name, Subject: `${site.role} - ${site.specialism}` } });
+const doc = new PDFDocument({ size: "A4", margins: { top: 44, bottom: 42, left, right }, bufferPages: true, info: { Title: `${site.name} - Curriculum Vitae`, Author: site.name, Subject: `${role} - ${specialism}` } });
 doc.pipe(fs.createWriteStream(output));
 
 function header() {
   doc.fillColor(text).font("Helvetica").fontSize(28).text("Leslie A. ", left, 45, { continued: true });
   doc.font("Helvetica-Bold").text("Lauw");
-  doc.moveDown(.25).fillColor(teal).font("Helvetica-Bold").fontSize(8.5).text(`${site.role.toUpperCase()}  -  ${site.specialism.toUpperCase()}`, { characterSpacing: .65 });
+  doc.moveDown(.25).fillColor(teal).font("Helvetica-Bold").fontSize(8.5).text(`${role.toUpperCase()}  -  ${specialism.toUpperCase()}`, { characterSpacing: .65 });
   const contact = `${site.location}\n${site.phone}  -  ${site.email}\ngithub.com/lalauw  -  linkedin.com/in/leslielauw`;
   doc.fillColor(muted).font("Helvetica").fontSize(7.5).text(contact, 315, 45, { width: 228, align: "right", lineGap: 2 });
   const y = 96;

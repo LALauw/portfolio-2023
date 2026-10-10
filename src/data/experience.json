@@ -8,11 +8,14 @@
     "link": "https://www.notive.nl/",
     "summary": "Since July 2024, taking the lead in DevOps with a focus on Infrastructure as Code, cloud infrastructure, and Kubernetes platform engineering.",
     "highlights": [
-      "Build and maintain cloud infrastructure on GCP and Kubernetes using Terraform.",
-      "Manage containerized deployments and GitOps delivery workflows with Docker and ArgoCD.",
-      "Improve release reliability through CI/CD automation, observability and clear operational documentation."
+      "Take the lead in designing and building Kubernetes platforms from scratch, covering cluster setup, supporting infrastructure and application deployment.",
+      "Provision and manage most cloud infrastructure on GCP with Terraform, keeping changes in Git so environments can be recreated consistently.",
+      "Use Helm charts to install and configure applications and infrastructure components within Kubernetes, including monitoring and logging for clusters and applications.",
+      "Set up Argo CD GitOps workflows and integrate them with CI/CD to automate application delivery and keep deployments aligned with configuration in Git.",
+      "Take responsibility for platform improvements and daily operations, including reliable deployments, monitoring, logging and operational documentation.",
+      "Connect infrastructure and application requirements, using a software engineering background to automate workflows and improve developer delivery."
     ],
-    "stack": ["Kubernetes", "Terraform", "GCP", "ArgoCD", "Docker", "CI/CD"],
+    "stack": ["Kubernetes", "Terraform", "Helm", "GCP", "Argo CD", "Docker", "CI/CD", "GitOps"],
     "focus": "Platform & DevOps"
   },
   {
@@ -22,9 +25,9 @@
     "period": "2023 - Present",
     "location": "The Netherlands",
     "link": "https://www.notive.nl/",
-    "summary": "Backend services and integrations that connect business-critical systems and reduce manual operations.",
+    "summary": "Backend services and integrations that connect core business systems and reduce manual operations.",
     "highlights": [
-      "Build and maintain backend services and integrations for business-critical workflows.",
+      "Build and maintain backend services and integrations for core business workflows.",
       "Translate operational requirements into reliable APIs, data flows and automation.",
       "Improve maintainability through testing, documentation and clear system boundaries."
     ],
@@ -41,7 +44,7 @@
     "summary": "Blockchain functionality and developer tooling for consumer-facing game products.",
     "highlights": [
       "Integrated blockchain components into games and developed TypeScript SDKs.",
-      "Built asset-management modules for the Sui blockchain using Move.",
+      "Built modules for managing assets on the Sui blockchain using Move.",
       "Developed web tools with Next.js, TypeScript, Tailwind CSS and Node.js."
     ],
     "stack": ["TypeScript", "Node.js", "Move", "Sui", "Next.js"],
