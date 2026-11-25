@@ -1,14 +1,14 @@
 [
   {
-    "title": "Build",
-    "items": ["PHP", "Symfony", "Python", "Django", "Laravel", "TypeScript", "Node.js", "C#", ".NET"]
+    "title": "Platform",
+    "items": ["Kubernetes", "Terraform", "Helm", "Argo CD", "Docker", "GCP", "DigitalOcean", "CI/CD", "GitOps", "Grafana", "Monitoring & logging"]
   },
   {
-    "title": "Run",
-    "items": ["Docker", "Terraform", "Kubernetes", "Helm", "DigitalOcean", "GCP"]
+    "title": "Backend",
+    "items": ["PHP", "Symfony", "Laravel", "Python", "Django", "Node.js", "REST APIs", "PostgreSQL", "C# / .NET"]
   },
   {
-    "title": "Maintain",
-    "items": ["ArgoCD", "CI/CD", "Grafana", "Automated Testing", "Technical Documentation"]
+    "title": "Frontend",
+    "items": ["TypeScript", "JavaScript", "React", "Next.js", "HTML", "CSS"]
   }
 ]

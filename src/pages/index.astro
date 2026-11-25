@@ -1,126 +1,126 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Illustration from "../components/Illustration.astro";
 import site from "../data/site.json";
 import experience from "../data/experience.json";
 import skills from "../data/skills.json";
+import { city, emphasis, formatPeriod, formatYears, groupBySlug } from "../lib/format.mjs";
 
-const [headlinePrimary, headlineSecondary] = site.headline.split(". ");
-const selectedWork = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
-const groupedExperience = experience.reduce<Array<{
-  slug: string;
-  company: string;
-  location: string;
-  link: string;
-  roles: typeof experience;
-}>>((groups, role) => {
-  const company = groups.find((group) => group.slug === role.slug);
-  if (company) company.roles.push(role);
-  else groups.push({
-    slug: role.slug,
-    company: role.company,
-    location: role.location,
-    link: role.link,
-    roles: [role],
-  });
-  return groups;
-}, []);
+const articles = (await getCollection("work")).sort((a, b) => a.data.order - b.data.order);
+const companies = groupBySlug(experience);
+const current = companies.filter((company) => !company.earlier);
+const earlier = companies.filter((company) => company.earlier);
+const articleDate = (date: string) => new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" }).format(new Date(date));
 ---
 
 <BaseLayout>
-  <section class="hero grid items-center">
-    <div class="hero-copy">
-      <p class="status" data-animate="kicker"><span class="status-dot" aria-hidden="true"></span>{site.availability}</p>
-      <h1 data-animate="headline">{headlinePrimary}. <em>{headlineSecondary}</em></h1>
-      <p class="hero-intro" data-animate="intro">{site.intro}</p>
-      <div class="hero-actions flex flex-wrap gap-3" data-animate="actions">
-        <a class="button button-primary" href="/cv/">Resume <span aria-hidden="true">→</span></a>
-        <a class="button button-secondary" href={site.socials[0].url} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+  <section class="wrap hero">
+    <h1 set:html={emphasis(site.headline)} />
+    <p class="lede" set:html={emphasis(site.intro, '<span class="underline">', "</span>")} />
+    <div class="actions">
+      <a class="btn btn-dark" href="/cv/">Read my CV <span aria-hidden="true">→</span></a>
+      <a class="btn btn-line" href={`mailto:${site.email}`}>Get in touch</a>
+    </div>
+  </section>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>{site.focus.title}</h2>
+        <p>{site.focus.intro}</p>
+      </div>
+      <div class="cards">
+        {site.focus.items.map((item) => (
+          <article class={`card bg-${item.color}`}>
+            <Illustration name={item.icon as "iac" | "kubernetes" | "gitops"} />
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
       </div>
     </div>
-    <div class="profile-code" aria-label="Profile data example" data-animate="code">
-      <div class="code-header"><span>profile.json</span><span class="status-sync"><span class="status-dot" aria-hidden="true"></span>synced</span></div>
-      <pre><code>&#123;
-  <span class="code-key">"role"</span>: <span class="code-value">"{site.role}"</span>,
-  <span class="code-key">"focus"</span>: [
-    <span class="code-value">"devops"</span>,
-    <span class="code-value">"backend"</span>,
-    <span class="code-value">"integrations"</span>
-  ],
-  <span class="code-key">"location"</span>: <span class="code-value">"{site.location}"</span>,
-  <span class="code-key">"status"</span>: <span class="code-value">"building"</span>
-&#125;</code></pre>
-    </div>
   </section>
 
-  <div class="rule"></div>
-  <section class="content-section grid" id="work" data-reveal>
-    <p class="section-index">01 / Selected work</p>
-    <div class="work-list" data-stagger>
-      {selectedWork.map((project) => (
-        <a class="work-item grid" href={`/work/${project.id}/`} data-stagger-item>
-          <div>
-            <h2>{project.data.title}</h2>
-            <p>{project.data.summary}</p>
-            <ul class="tag-list flex flex-wrap" aria-label="Technologies">
-              {project.data.stack.map((item) => <li>{item}</li>)}
-            </ul>
-          </div>
-          <p class="work-meta">{project.data.date.slice(0, 4)}<br />{project.data.subtitle}<br /><span>Read article ↗</span></p>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <div class="rule"></div>
-  <section class="content-section grid" id="experience" data-reveal>
-    <p class="section-index">02 / Experience</p>
-    <div class="experience-list" data-stagger>
-      {groupedExperience.map((group) => (
-        <article class="experience-company" data-stagger-item>
-          <header class="company-overview">
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Experience</h2>
+        <p>{site.experienceIntro}</p>
+      </div>
+      <ol class="experience">
+        {current.map((company) => (
+          <li>
+            <div class="experience-when">{formatYears(company.roles)}</div>
             <div>
-              <a href={group.link} target="_blank" rel="noreferrer"><h2>{group.company} <span aria-hidden="true">↗</span></h2></a>
-              <p>{group.location}</p>
+              <h3><a href={company.link} target="_blank" rel="noreferrer">{company.company}</a></h3>
+              {company.roles.length === 1 ? (
+                <>
+                  <p class="experience-role">{company.roles[0].title} · {city(company.location)}</p>
+                  <p class="experience-summary">{company.roles[0].summary}</p>
+                </>
+              ) : (
+                <>
+                  <ul class="roles">
+                    {company.roles.map((role) => (
+                      <li><strong>{role.title}</strong><span>{formatPeriod(role.start, role.end)}</span></li>
+                    ))}
+                  </ul>
+                  <details>
+                    <summary>What I do there</summary>
+                    {company.roles.map((role) => (
+                      <div class="details-role">
+                        <h4>{role.title}</h4>
+                        <ul>{role.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+                      </div>
+                    ))}
+                  </details>
+                </>
+              )}
             </div>
-            {group.roles.length > 1 && <span>{group.roles.length} roles</span>}
-          </header>
-          <div class="company-role-list">
-            {group.roles.map((role) => (
-              <section class="company-role">
-                <span class="role-marker" aria-hidden="true"></span>
-                <div class="role-copy">
-                  <div class="role-heading">
-                    <h3>{role.title}</h3>
-                    <p>{role.period}</p>
-                  </div>
-                  <p class="role-summary">{role.summary}</p>
-                  <ul class="role-highlights">
-                    {role.highlights.map((highlight) => <li>{highlight}</li>)}
-                  </ul>
-                  <ul class="tag-list" aria-label={`Technologies used as ${role.title}`}>
-                    {role.stack.map((item) => <li>{item}</li>)}
-                  </ul>
-                </div>
-              </section>
-            ))}
-          </div>
-        </article>
+          </li>
+        ))}
+      </ol>
+      {earlier.map((company) => (
+        <p class="earlier">
+          Earlier: {company.roles[0].title.toLowerCase()} at {company.company} ({formatYears(company.roles)}), {company.roles[0].summary}.
+        </p>
       ))}
     </div>
   </section>
 
-  <div class="rule"></div>
-  <section class="content-section grid" data-reveal>
-    <p class="section-index">03 / Toolchain</p>
-    <div class="toolchain grid" data-stagger>
-      {skills.map((group, index) => (
-        <article class="tool-group" data-stagger-item>
-          <span>0{index + 1}</span>
-          <h2>{group.title}</h2>
-          <p>{group.items.join(" · ")}</p>
-        </article>
-      ))}
+  <section class="block" id="writing">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Writing</h2>
+        <p>{site.writingIntro}</p>
+      </div>
+      <div class="posts">
+        {articles.map((article) => (
+          <a class="post" href={`/work/${article.id}/`}>
+            <div class={`post-thumb bg-${article.data.color}`}><Illustration name={article.data.icon} /></div>
+            <div class="post-text">
+              <p class="post-meta">{articleDate(article.data.date)} · {article.data.context}</p>
+              <h3>{article.data.title}</h3>
+              <p>{article.data.summary}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head"><h2>Toolbox</h2></div>
+      <div class="tools">
+        {skills.map((group) => (
+          <div>
+            <h3>{group.title}</h3>
+            <p>{group.items.join(", ")}</p>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 </BaseLayout>

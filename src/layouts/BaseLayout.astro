@@ -1,4 +1,10 @@
 ---
+import "@fontsource/newsreader/400.css";
+import "@fontsource/newsreader/400-italic.css";
+import "@fontsource/newsreader/500.css";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/600.css";
 import "../styles/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
@@ -11,7 +17,7 @@ interface Props {
 
 const {
   title = `${site.name} - ${site.role}`,
-  description = site.intro
+  description = site.description
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const socialImage = new URL("/og.png", Astro.site);
@@ -21,10 +27,10 @@ const socialImage = new URL("/og.png", Astro.site);
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0b100f" />
+    <meta name="theme-color" content="#f4f7fa" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.ico" />
     <meta property="og:type" content="website" />
@@ -32,75 +38,14 @@ const socialImage = new URL("/og.png", Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={socialImage} />
-    <meta property="og:image:width" content="1536" />
-    <meta property="og:image:height" content="1024" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={socialImage} />
     <title>{title}</title>
   </head>
-  <body class="bg-page text-ink antialiased">
+  <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <div class="site-shell">
-      <SiteHeader />
-      <main id="main-content"><slot /></main>
-      <SiteFooter />
-    </div>
-    <script>
-      import { gsap } from "gsap";
-      import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      const media = gsap.matchMedia();
-
-      media.add("(prefers-reduced-motion: no-preference)", () => {
-        const intro = gsap.timeline({ defaults: { duration: 0.7, ease: "power2.out" } });
-
-        intro.from("[data-animate='nav']", { autoAlpha: 0, y: -10, duration: 0.5 });
-
-        if (document.querySelector("[data-animate='headline']")) {
-          intro
-            .from("[data-animate='kicker']", { autoAlpha: 0, y: 12 }, "-=0.2")
-            .from("[data-animate='headline']", { autoAlpha: 0, y: 22 }, "-=0.45")
-            .from("[data-animate='intro']", { autoAlpha: 0, y: 16 }, "-=0.45")
-            .from("[data-animate='actions'] > *", { autoAlpha: 0, y: 12, stagger: 0.08 }, "-=0.4")
-            .from("[data-animate='code']", { autoAlpha: 0, y: 18, duration: 0.8 }, "-=0.65");
-        }
-
-        gsap.utils.toArray<HTMLElement>("[data-reveal]").forEach((element) => {
-          gsap.from(element, {
-            autoAlpha: 0,
-            y: 24,
-            duration: 0.75,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: element,
-              start: "top 88%",
-              once: true
-            }
-          });
-        });
-
-        gsap.utils.toArray<HTMLElement>("[data-stagger]").forEach((group) => {
-          const items = group.querySelectorAll<HTMLElement>("[data-stagger-item]");
-          if (!items.length) return;
-
-          gsap.from(items, {
-            autoAlpha: 0,
-            y: 18,
-            duration: 0.65,
-            ease: "power2.out",
-            stagger: 0.08,
-            scrollTrigger: {
-              trigger: group,
-              start: "top 86%",
-              once: true
-            }
-          });
-        });
-
-        return () => intro.kill();
-      });
-    </script>
+    <SiteHeader />
+    <main id="main-content"><slot /></main>
+    <SiteFooter />
   </body>
 </html>

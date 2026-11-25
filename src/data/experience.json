@@ -3,98 +3,94 @@
     "slug": "notive",
     "company": "Notive",
     "title": "DevOps Engineer",
-    "period": "2024 - Present",
+    "start": "2024-07",
+    "end": null,
     "location": "The Netherlands",
     "link": "https://www.notive.nl/",
-    "summary": "Since July 2024, taking the lead in DevOps with a focus on Infrastructure as Code, cloud infrastructure, and Kubernetes platform engineering.",
+    "summary": "Kubernetes platforms from scratch: Terraform, Helm, Argo CD, monitoring and day-to-day operations.",
     "highlights": [
-      "Take the lead in designing and building Kubernetes platforms from scratch, covering cluster setup, supporting infrastructure and application deployment.",
-      "Provision and manage most cloud infrastructure on GCP with Terraform, keeping changes in Git so environments can be recreated consistently.",
-      "Use Helm charts to install and configure applications and infrastructure components within Kubernetes, including monitoring and logging for clusters and applications.",
-      "Set up Argo CD GitOps workflows and integrate them with CI/CD to automate application delivery and keep deployments aligned with configuration in Git.",
-      "Take responsibility for platform improvements and daily operations, including reliable deployments, monitoring, logging and operational documentation.",
-      "Connect infrastructure and application requirements, using a software engineering background to automate workflows and improve developer delivery."
+      "Designed and built Kubernetes platforms from scratch: cluster setup, supporting infrastructure and application deployment.",
+      "Manage most of the company's GCP infrastructure in Terraform, so environments can be recreated from Git.",
+      "Install and configure applications and cluster components with Helm, including monitoring and logging.",
+      "Set up GitOps delivery with Argo CD, integrated with the CI/CD pipelines.",
+      "Responsible for daily operations: deployments, monitoring, logging and operational documentation."
     ],
-    "stack": ["Kubernetes", "Terraform", "Helm", "GCP", "Argo CD", "Docker", "CI/CD", "GitOps"],
-    "focus": "Platform & DevOps"
+    "stack": ["Kubernetes", "Terraform", "Helm", "GCP", "Argo CD", "Docker", "CI/CD", "GitOps"]
   },
   {
     "slug": "notive",
     "company": "Notive",
     "title": "Software Engineer",
-    "period": "2023 - Present",
+    "start": "2023",
+    "end": null,
     "location": "The Netherlands",
     "link": "https://www.notive.nl/",
-    "summary": "Backend services and integrations that connect core business systems and reduce manual operations.",
+    "summary": "Backend services and integrations in PHP/Symfony and Python/Django, alongside the platform work.",
     "highlights": [
-      "Build and maintain backend services and integrations for core business workflows.",
-      "Translate operational requirements into reliable APIs, data flows and automation.",
-      "Improve maintainability through testing, documentation and clear system boundaries."
+      "Build and maintain backend services and integrations for core business workflows (PHP/Symfony, Python/Django).",
+      "Turn operational requirements into APIs, data flows and automation."
     ],
-    "stack": ["PHP", "Symfony", "Python", "Django", "PostgreSQL", "Docker"],
-    "focus": "Backend"
+    "stack": ["PHP", "Symfony", "Python", "Django", "PostgreSQL", "Docker"]
   },
   {
     "slug": "lucky-kat",
     "company": "Lucky Kat Studios",
     "title": "Web3 Developer",
-    "period": "2023",
+    "start": "2023",
+    "end": "2023",
     "location": "The Hague, The Netherlands",
     "link": "https://www.lucky-kat.com/",
-    "summary": "Blockchain functionality and developer tooling for consumer-facing game products.",
+    "summary": "Moved the studio's NFTs from Solana to Sui, wrote Move modules for in-game assets and TypeScript SDKs for the game teams.",
     "highlights": [
-      "Integrated blockchain components into games and developed TypeScript SDKs.",
-      "Built modules for managing assets on the Sui blockchain using Move.",
-      "Developed web tools with Next.js, TypeScript, Tailwind CSS and Node.js."
+      "Migrated NFTs from Solana to Sui and built Move modules for managing in-game assets.",
+      "Integrated blockchain components into games and developed TypeScript SDKs."
     ],
-    "stack": ["TypeScript", "Node.js", "Move", "Sui", "Next.js"],
-    "focus": "Web3"
+    "stack": ["TypeScript", "Node.js", "Move", "Sui", "Next.js"]
   },
   {
     "slug": "koios",
     "company": "KOIOS",
-    "title": "Web3 Software Engineer & Graduate",
-    "period": "2021 - 2023",
+    "title": "Software Engineer & Graduate",
+    "start": "2021",
+    "end": "2023",
     "location": "Remote",
     "link": "https://koios.world/",
-    "summary": "Web3 products taken from prototype to production with an emphasis on maintainability and developer experience.",
+    "summary": "Built a gamified learning platform in TypeScript and Node.js, plus smart contracts for Polygon and Ethereum. Graduated here with a 9.5.",
     "highlights": [
-      "Designed and built a gamified learning platform using TypeScript and Node.js.",
-      "Developed APIs and smart contracts for Polygon and Ethereum.",
-      "Completed graduation research with a final grade of 9.5/10."
+      "Designed and built a gamified learning platform with TypeScript and Node.js.",
+      "Developed APIs and smart contracts for Polygon and Ethereum. Graduation research graded 9.5/10."
     ],
-    "stack": ["TypeScript", "Node.js", "Solidity", "Web3"],
-    "focus": "Platform"
+    "stack": ["TypeScript", "Node.js", "Solidity", "Web3"]
   },
   {
     "slug": "methylium",
     "company": "Methylium",
-    "title": "Software Engineer & Intern",
-    "period": "Aug. 2020 - Feb. 2021",
+    "title": "Software Engineering Intern",
+    "start": "2020-08",
+    "end": "2021-02",
     "location": "The Hague, The Netherlands",
     "link": "https://www.methylium.com/",
-    "summary": "Application development and rollout automation for software running across many devices.",
+    "summary": "An automated rollout feature for the tablets in CitizenM hotel rooms, in Angular and .NET.",
     "highlights": [
       "Developed an automated rollout feature for applications across many devices.",
-      "Built an Angular interface for bulk device selection and rollout monitoring.",
-      "Extended .NET APIs and Microsoft SQL Server data flows."
+      "Built an Angular interface for bulk device selection and rollout monitoring, backed by .NET APIs and SQL Server."
     ],
-    "stack": ["C#", ".NET", "Angular", "SQL Server"],
-    "focus": "DevOps"
+    "stack": ["C#", ".NET", "Angular", "SQL Server"]
   },
   {
     "slug": "de-beren",
     "company": "De Beren",
     "title": "Assistant Manager",
-    "period": "2016 - 2022",
+    "start": "2016",
+    "end": "2022",
     "location": "Zwijndrecht, The Netherlands",
     "link": "https://www.beren.nl/",
-    "summary": "Team supervision and day-to-day operational responsibility in hospitality.",
+    "earlier": true,
+    "summary": "running shifts, staff planning and orders alongside my studies",
     "highlights": [
       "Supervised staff and coordinated day-to-day operations.",
       "Planned personnel, orders and logistics during busy shifts."
     ],
-    "stack": ["Leadership", "Operations", "Planning"],
-    "focus": "Operations"
+    "stack": ["Leadership", "Operations", "Planning"]
   }
 ]

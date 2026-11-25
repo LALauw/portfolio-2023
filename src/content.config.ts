@@ -5,14 +5,13 @@ const work = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/work" }),
   schema: z.object({
     title: z.string(),
-    smallTitle: z.string(),
-    subtitle: z.string(),
     summary: z.string(),
     date: z.string(),
-    hero: z.string(),
-    role: z.string(),
     context: z.string(),
+    role: z.string(),
     stack: z.array(z.string()),
+    color: z.enum(["sky", "sage", "lilac", "peach", "butter"]),
+    icon: z.enum(["drop", "hex", "tablet", "iac", "kubernetes", "gitops"]),
     order: z.number(),
   }),
 });

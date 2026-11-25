@@ -1,13 +1,12 @@
 ---
-title: "Gamification of Education using Dynamic NFTs"
-smallTitle: "Dynamic NFTs"
-subtitle: "Graduation Assignment"
-summary: "KOIOS is a community focused on learning. However they do not intend to replicate a digital university or learning platform. Instead, they intend to build a digital version of a schoolyard. A lively and playful place bordering learning institutions but still well-connected with the fast-changing world. You learn and earn while playing. An environment where you come together to grow and build friendships for life."
+title: "Gamification of education using dynamic NFTs"
+summary: "My graduation project at KOIOS: NFTs that change as students progress, with the metadata off-chain and the asset itself on-chain."
 date: "2023-01-01"
-hero: "/articles/gamification-of-education-using-dynamic-nfts/hero.jpg"
+context: "Graduation, KOIOS"
 role: "Software Engineer & Graduate"
-context: "KOIOS"
-stack: ["Solidity","TypeScript","Node.js","Web3"]
+stack: ["Solidity", "TypeScript", "Node.js"]
+color: "butter"
+icon: "hex"
 order: 2
 ---
 The organization where I graduated at was [KOIOS](https://koios.world/). As a developer and web3 enthusiast I was determined to finish my study in software engineering with an assignment that focuses on web3 technology. During this time I developed an application that allows students to create their own dynamic NFT.
@@ -23,7 +22,7 @@ There are 2 options for handling metadata:
 - Off-chain metadata, this means that metadata is stored in a database
 - On-chain metadata, this means that metadata is stored on the blockchain
 
-The problem is that on-chain metadata is quite expensive, since storing data on a blockchain requires a lot of gas. Another problem to solve was that the dynamic NFTs should be non-tranferable. This means that when a student receives an NFT, he or she is not allowed to send the NFT. KOIOS wanted this, because there should be no financial incentive attached to the NFTs.
+The problem is that on-chain metadata is quite expensive, since storing data on a blockchain requires a lot of gas. Another problem to solve was that the dynamic NFTs should be non-transferable. This means that when a student receives an NFT, he or she is not allowed to send the NFT. KOIOS wanted this, because there should be no financial incentive attached to the NFTs.
 
 ## The Solution
 

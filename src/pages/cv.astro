@@ -3,24 +3,75 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import site from "../data/site.json";
 import cv from "../data/cv.json";
 import experience from "../data/experience.json";
+import skills from "../data/skills.json";
+import { formatPeriod, shortUrl } from "../lib/format.mjs";
 
-const cvExperience = cv.experienceSlugs.flatMap((slug) => experience.filter((job) => job.slug === slug));
+const jobs = cv.experienceSlugs.flatMap((slug) => experience.filter((job) => job.slug === slug));
 ---
 
 <BaseLayout title={`Curriculum vitae - ${site.name}`} description={`${site.name}'s curriculum vitae`}>
-  <div class="cv-toolbar flex items-center justify-between" data-reveal>
-    <div><p class="section-index">Curriculum vitae</p><p>Generated from <code>src/data/cv.json</code></p></div>
-    <a class="button button-primary" href={`/${cv.filename}`} download>Download PDF ↓</a>
+  <div class="wrap cv-bar">
+    <div>
+      <h1>Curriculum vitae</h1>
+      <p>The same content as the PDF, generated from the JSON files.</p>
+    </div>
+    <a class="btn btn-dark" href={`/${cv.filename}`} download>Download PDF <span aria-hidden="true">↓</span></a>
   </div>
-  <article class="cv-sheet" data-reveal>
-    <header class="cv-header">
-      <div><h1>Leslie A. <strong>Lauw</strong></h1><p>{cv.role ?? site.role} · {cv.specialism ?? site.specialism}</p></div>
-      <address>{site.location}<br />{site.phone} · {site.email}<br />github.com/lalauw · linkedin.com/in/leslielauw</address>
-    </header>
-    <section class="cv-section"><h2>Profile</h2><p>{cv.profile}</p></section>
-    <section class="cv-section"><h2>Technical skills</h2><dl class="cv-skills">{Object.entries(cv.skills).map(([category, items]) => <><dt>{category}</dt><dd>{items.join(", ")}</dd></>)}</dl></section>
-    <section class="cv-section"><h2>Work experience</h2><div>{cvExperience.map((job) => job && <article class="cv-job"><div class="cv-job-heading"><div><h3>{job.company}</h3><p>{job.title}</p></div><p>{job.location}<br /><span>{job.period}</span></p></div><ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul></article>)}</div></section>
-    <section class="cv-section"><h2>Education</h2><div>{cv.education.map((item) => <article class="cv-education"><div><h3>{item.school}</h3><p>{item.degree}</p></div><p>{item.location}<br /><span>{item.period}</span></p></article>)}</div></section>
-    <div class="cv-two-column"><section class="cv-section"><h2>Languages</h2><ul>{cv.languages.map((item) => <li>{item}</li>)}</ul></section><section class="cv-section"><h2>Interests</h2><ul>{cv.interests.map((item) => <li>{item}</li>)}</ul></section></div>
-  </article>
+
+  <div class="wrap">
+    <article class="sheet">
+      <header class="sheet-head">
+        <div>
+          <h2 class="sheet-name">{site.fullName}</h2>
+          <p class="sheet-title">{cv.title} — {cv.specialism}</p>
+        </div>
+        <address>
+          {site.location}<br />
+          {site.phone} · {site.email}<br />
+          {site.socials.map((social) => shortUrl(social.url)).join(" · ")}
+        </address>
+      </header>
+
+      <section class="cv-row"><h3>Profile</h3><p>{cv.profile}</p></section>
+
+      <section class="cv-row">
+        <h3>Skills</h3>
+        <dl class="cv-skills">
+          {skills.map((group) => (
+            <>
+              <dt>{group.title}</dt>
+              <dd>{group.items.join(", ")}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+
+      <section class="cv-row">
+        <h3>Experience</h3>
+        <div>
+          {jobs.map((job) => (
+            <div class="cv-item">
+              <div class="cv-item-top"><b>{job.company} — {job.title}</b><span>{formatPeriod(job.start, job.end)}</span></div>
+              <ul>{job.highlights.map((highlight) => <li>{highlight}</li>)}</ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="cv-row">
+        <h3>Education</h3>
+        <div>
+          {cv.education.map((item) => (
+            <div class="cv-item">
+              <div class="cv-item-top"><b>{item.degree}</b><span>{formatPeriod(item.start, item.end)}</span></div>
+              <p class="cv-muted">{item.school}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="cv-row"><h3>Languages</h3><p>{cv.languages.join(", ")}</p></section>
+      <section class="cv-row"><h3>Interests</h3><p>{cv.interests.join(" · ")}</p></section>
+    </article>
+  </div>
 </BaseLayout>

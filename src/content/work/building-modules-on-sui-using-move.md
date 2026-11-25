@@ -1,13 +1,12 @@
 ---
-title: "Building Modules on Sui using Move"
-smallTitle: "Building on Sui"
-subtitle: "Blockchain & Web3"
-summary: "The Sui Blockchain is a cutting-edge platform for decentralized application (dapp) development. Powered by the Move programming language, it offers a secure and efficient environment for building modules (smart contracts) and dapps. Move prioritizes safety and security, preventing vulnerabilities and errors commonly associated with smart contracts. Its advanced type system ensures type-safety and resource ownership, while a comprehensive tooling ecosystem supports development, deployment, and verification. The Sui Blockchain and Move language provide developers with a powerful and reliable solution for creating robust decentralized applications."
+title: "Building modules on Sui using Move"
+summary: "What I learned moving NFTs from Solana to Sui at Lucky Kat, with a small Move example."
 date: "2023-07-02"
-hero: "/articles/building-modules-on-sui-using-move/hero.jpg"
-role: "Web3 Developer"
 context: "Lucky Kat Studios"
-stack: ["Move","Sui","TypeScript","Web3"]
+role: "Web3 Developer"
+stack: ["Move", "Sui", "TypeScript"]
+color: "sky"
+icon: "drop"
 order: 1
 ---
 Over the past few months, I have had the opportunity to work at Lucky Kat Studios, where my primary responsibility was to facilitate the migration of Solana-based non-fungible tokens (NFTs) to the Sui Blockchain. This undertaking posed a significant challenge as Sui is a recently launched blockchain, making it a novel and uncharted territory. Throughout my tenure, I have gained invaluable experience and knowledge, particularly in acquainting myself with Move, a wholly new programming language that accompanies the Sui Blockchain. In this article I will explain Sui and Move by providing a simple coding example.

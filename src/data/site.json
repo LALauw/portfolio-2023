@@ -1,16 +1,47 @@
 {
   "name": "Leslie Lauw",
-  "shortName": "LA",
-  "role": "DevOps / Software Engineer",
-  "specialism": "",
-  "headline": "Software that works. Systems that last.",
-  "intro": "I build systems, infrastructure and reliable integrations. I turn complex operational problems into maintainable software.",
+  "fullName": "Leslie A. Lauw",
+  "initials": "LA",
+  "role": "DevOps Engineer",
+  "headline": "DevOps engineer, steering *Kubernetes clusters* through the age of AI.",
+  "intro": "I'm Leslie. At Notive I build cloud infrastructure and Kubernetes clusters from scratch with Terraform, Helm and Argo CD, and keep them running. I'm still a software engineer too, so I see the platform from the *developer's side* as well.",
+  "description": "Leslie Lauw is a DevOps engineer at Notive, building and running Kubernetes platforms with Terraform, Helm and Argo CD.",
   "location": "The Netherlands",
-  "availability": "Currently employed @ Notive",
   "email": "lauw2498@gmail.com",
   "phone": "(+31) 6-34037846",
   "socials": [
-    { "label": "GitHub", "url": "https://github.com/lalauw" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/leslielauw/" }
-  ]
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/leslielauw/" },
+    { "label": "GitHub", "url": "https://github.com/lalauw" }
+  ],
+  "sourceUrl": "https://github.com/LALauw/portfolio-2023",
+  "focus": {
+    "title": "What I work on",
+    "intro": "Day to day I'm responsible for the platform: from the first Terraform module to the dashboards we check in the morning.",
+    "items": [
+      {
+        "title": "Infrastructure as code",
+        "text": "Our cloud infrastructure lives in Terraform, in Git. Environments can be rebuilt from the repository instead of from memory.",
+        "color": "sky",
+        "icon": "iac"
+      },
+      {
+        "title": "Kubernetes platforms",
+        "text": "Cluster setup, the components around it and the Helm charts that install them, including monitoring and logging for clusters and apps.",
+        "color": "sage",
+        "icon": "kubernetes"
+      },
+      {
+        "title": "GitOps delivery",
+        "text": "Argo CD keeps what runs in the cluster in line with what's in Git, hooked into our CI/CD pipelines so a merge becomes a deploy.",
+        "color": "lilac",
+        "icon": "gitops"
+      }
+    ]
+  },
+  "experienceIntro": "Writing software since 2020, running platforms since 2024.",
+  "writingIntro": "Longer write-ups of projects I worked on.",
+  "footer": {
+    "title": "Let's build something reliable.",
+    "text": "Always open for a talk."
+  }
 }

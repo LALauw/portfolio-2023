@@ -3,14 +3,22 @@ import site from "../data/site.json";
 const year = new Date().getFullYear();
 ---
 
-<footer class="site-footer border-t border-line" data-reveal>
-  <div>
-    <p class="footer-title">Let's build something reliable.</p>
-    <p>Open to engineering work and technical collaboration.</p>
+<footer class="site-footer">
+  <div class="wrap">
+    <h2>{site.footer.title}</h2>
+    <p>{site.footer.text}</p>
+    <div class="actions">
+      <a class="btn btn-dark" href={`mailto:${site.email}`}>Email me</a>
+      {site.socials.map((social) => (
+        <a class="btn btn-line" href={social.url} target="_blank" rel="noreferrer">{social.label}</a>
+      ))}
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} {site.name} · This site and the CV are generated from a handful of JSON files.</span>
+      <span class="footer-links">
+        <a href="/cv/">CV</a>
+        <a href={site.sourceUrl} target="_blank" rel="noreferrer">Source</a>
+      </span>
+    </div>
   </div>
-  <div class="footer-links">
-    {site.socials.map((social) => <a href={social.url} target="_blank" rel="noreferrer">{social.label} ↗</a>)}
-    <a href={`mailto:${site.email}`}>Email ↗</a>
-  </div>
-  <p class="footer-meta">© {year} {site.name}</p>
 </footer>
